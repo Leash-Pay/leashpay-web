@@ -17,10 +17,10 @@ const MainLayout = (props: { [x: string]: any; children: any }) => {
   };
 
   return (
-    <div className="min-h-screen w-full border border-red-700">
+    <div className="h-full w-full  ">
       <Navbar />
-      <div>hhh</div>
-      <main className="flex flex-col border">
+
+      <main className=" container mx-auto px-4 sm:px-0 flex flex-col h-full border border-red-700 relative mt-10 ">
         <div className="z-10">
           <PageTransition>{children}</PageTransition>
         </div>
