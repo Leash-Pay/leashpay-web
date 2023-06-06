@@ -15,7 +15,7 @@ module.exports = {
       },
       colors: {
         primary: "#008999",
-        secondary: "#AB2346",
+        secondary: "#F79400",
         purple: "#6600CC",
         ruby: "#CC0066",
       },

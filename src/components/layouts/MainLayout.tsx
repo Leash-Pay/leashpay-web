@@ -20,7 +20,7 @@ const MainLayout = (props: { [x: string]: any; children: any }) => {
     <div className="h-full w-full  ">
       <Navbar />
 
-      <main className=" container mx-auto px-4 sm:px-0 flex flex-col h-full border border-red-700 relative mt-10 ">
+      <main className=" container mx-auto px-4 sm:px-0 flex flex-col h-full  border-red-700 relative mt-16 ">
         <div className="z-10">
           <PageTransition>{children}</PageTransition>
         </div>
