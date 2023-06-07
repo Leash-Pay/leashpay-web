@@ -19,6 +19,7 @@ module.exports = {
         purple: "#6600CC",
         ruby: "#CC0066",
       },
+
     
     },
   },

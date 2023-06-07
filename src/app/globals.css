@@ -13,3 +13,7 @@
 body {
   background-color: #F7F7F7;
 }
+
+.customContainer {
+  @apply container mx-auto px-5 sm:px-0
+}

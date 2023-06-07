@@ -1,8 +1,11 @@
 import "./globals.css";
-import { Inter } from "next/font/google";
+import { Encode_Sans } from "next/font/google";
 import siteMetadata from "@/lib/siteMetaData";
 
-const inter = Inter({ subsets: ["latin"] });
+const encodeSans = Encode_Sans({
+  subsets: ["latin"],
+  variable: "--font-encode",
+});
 
 export const metadata = {
   title: siteMetadata.title,
@@ -21,7 +24,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={encodeSans.className}>{children}</body>
     </html>
   );
 }
