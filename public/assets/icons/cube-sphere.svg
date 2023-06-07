@@ -1,0 +1,15 @@
+<svg id="_3d-cube-sphere" data-name="3d-cube-sphere" xmlns="http://www.w3.org/2000/svg" width="72.988" height="72.988" viewBox="0 0 72.988 72.988">
+  <path id="Path_1373" data-name="Path 1373" d="M0,0H72.988V72.988H0Z" fill="none"/>
+  <path id="Path_1374" data-name="Path 1374" d="M10.082,24.948,4,21.6V14" transform="translate(8.165 28.576)" fill="none" stroke="#004e57" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+  <path id="Path_1375" data-name="Path 1375" d="M4,17.348v-7.6L10.082,6.4" transform="translate(8.165 13.063)" fill="none" stroke="#004e57" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+  <path id="Path_1376" data-name="Path 1376" d="M10,6.345,16.082,3l6.082,3.345" transform="translate(20.412 6.124)" fill="none" stroke="#004e57" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+  <path id="Path_1377" data-name="Path 1377" d="M18,6.4l6.082,3.345v7.6" transform="translate(36.741 13.063)" fill="none" stroke="#004e57" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+  <path id="Path_1378" data-name="Path 1378" d="M24.082,14v7.6L18,25.009" transform="translate(36.741 28.576)" fill="none" stroke="#004e57" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+  <path id="Path_1379" data-name="Path 1379" d="M22.165,19.9l-6.082,3.345L10,19.9" transform="translate(20.412 40.619)" fill="none" stroke="#004e57" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+  <path id="Path_1380" data-name="Path 1380" d="M12,14.245,18.082,10.9" transform="translate(24.494 22.249)" fill="none" stroke="#004e57" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+  <path id="Path_1381" data-name="Path 1381" d="M18,10.845,24.082,7.5" transform="translate(36.741 15.309)" fill="none" stroke="#004e57" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+  <path id="Path_1382" data-name="Path 1382" d="M12,12v7.6" transform="translate(24.494 24.494)" fill="none" stroke="#004e57" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+  <path id="Path_1383" data-name="Path 1383" d="M12,18.5v7.6" transform="translate(24.494 37.762)" fill="none" stroke="#004e57" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+  <path id="Path_1384" data-name="Path 1384" d="M16.082,14.286,10,10.88" transform="translate(20.412 22.208)" fill="none" stroke="#004e57" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+  <path id="Path_1385" data-name="Path 1385" d="M10.082,10.845,4,7.5" transform="translate(8.165 15.309)" fill="none" stroke="#004e57" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+</svg>

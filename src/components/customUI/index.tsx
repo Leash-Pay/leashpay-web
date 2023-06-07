@@ -1,13 +1,20 @@
 interface PrimaryButtonProps {
   text: string;
   onClickHandler?: () => void;
+  type?: 1 | 2;
 }
 
-const PrimaryButton = ({ text, onClickHandler }: PrimaryButtonProps) => {
+const PrimaryButton = ({
+  text,
+  onClickHandler,
+  type = 1,
+}: PrimaryButtonProps) => {
   return (
     <button
       className={` group
-      border bg-primary rounded-[40px] h-auto w-auto text-white px-6  whitespace-nowrap py-3  uppercase  font-extralight 
+       ${
+         type === 1 ? "bg-primary text-white" : "bg-white text-primary"
+       } rounded-[40px] h-auto w-auto  px-6  whitespace-nowrap py-3  uppercase  font-extralight 
     hover:bg-secondary 
        transition-all  transform hover:scale-x-105
     
