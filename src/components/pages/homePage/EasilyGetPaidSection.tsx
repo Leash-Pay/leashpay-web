@@ -24,10 +24,8 @@ const EasilyGetPaidSection = () => {
       <div className="  bg-[url('/assets/img/bg/happy-lad-mobile.jpeg')] sm:bg-[url('/assets/img/bg/happy-lad.jpeg')] h-full bg-cover rounded-[50px] bg-center p-5 flex flex-col sm:flex-row">
         <div className="w-full flex flex-col justify-end sm:justify-around h-full gap-4  sm:p-10 md:p-6 ">
           <div className="hidden sm:block my-8"></div>
-          <h1 className="text-4xl md:text-6xl text-secondary font-bold">
-            Easily get paid
-          </h1>
-          <p className="text-white text-base sm:text-xl">
+          <h1 className="headerText1 text-secondary ">Easily get paid</h1>
+          <p className="paragraphText1 text-white">
             Sign up with LeashPay in few minutes and start receiving your
             payments.
           </p>

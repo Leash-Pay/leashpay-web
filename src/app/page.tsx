@@ -2,6 +2,7 @@ import MainLayout from "@/components/layouts/MainLayout";
 import EasilyGetPaidSection from "@/components/pages/homePage/EasilyGetPaidSection";
 import HeroSection from "@/components/pages/homePage/HeroSection";
 import JusBuildSection from "@/components/pages/homePage/JusBuildSection";
+import ManyWaysToSection from "@/components/pages/homePage/ManyWaysToSection";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
         <HeroSection />
         <JusBuildSection />
         <EasilyGetPaidSection />
+        <ManyWaysToSection />
         <div className="my-10"></div>
       </div>
     </MainLayout>

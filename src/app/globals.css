@@ -17,3 +17,11 @@ body {
 .customContainer {
   @apply container mx-auto px-5 sm:px-0
 }
+
+.headerText1 {
+  @apply text-4xl md:text-6xl font-bold
+}
+
+.paragraphText1 {
+  @apply text-base sm:text-xl
+}
