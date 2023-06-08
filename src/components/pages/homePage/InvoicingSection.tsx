@@ -5,7 +5,7 @@ const InvoicingSection = () => {
   return (
     <section className="homepageCardSize customContainer">
       <div className="bg-white flex flex-col sm:flex-row customHomepageSection">
-        <div className="flex flex-col gap-6 w-full  sm:p-10 md:p-6 ">
+        <div className="flex flex-col gap-10 w-full  sm:p-10 md:p-6 ">
           <h1 className="text-secondary headerText1">Invoicing</h1>
           <p className="text-primary paragraphText1 hidden sm:block">
             We let you invoice your clients in a matter of minutes. <br />

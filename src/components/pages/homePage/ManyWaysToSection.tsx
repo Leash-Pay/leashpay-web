@@ -18,7 +18,7 @@ const ManyWaysToSection = () => {
   return (
     <section className="w-full h-full customContainer">
       <div className="flex flex-col md:flex-row  bg-white customHomepageSection">
-        <div className="flex flex-col gap-6 w-full  sm:p-10 md:p-6  ">
+        <div className="flex flex-col gap-10 w-full  sm:p-10 md:p-6  ">
           <h1 className="text-secondary headerText1">Many ways to get paid</h1>
           <p className="text-primary paragraphText1">
             We integrate with the most popular payment methods globally,

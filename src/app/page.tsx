@@ -1,5 +1,6 @@
 import MainLayout from "@/components/layouts/MainLayout";
 import CardIssuingSection from "@/components/pages/homePage/CardIssuingSection";
+import DocumentationSection from "@/components/pages/homePage/DocumentationSection";
 import EasilyGetPaidSection from "@/components/pages/homePage/EasilyGetPaidSection";
 import HeroSection from "@/components/pages/homePage/HeroSection";
 import InvoicingSection from "@/components/pages/homePage/InvoicingSection";
@@ -18,6 +19,7 @@ export default function Home() {
         <CardIssuingSection />
         <InvoicingSection />
         <TrustSection />
+        <DocumentationSection />
         <div className="my-10"></div>
       </div>
     </MainLayout>

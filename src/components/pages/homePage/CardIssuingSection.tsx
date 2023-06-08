@@ -5,7 +5,7 @@ const CardIssuingSection = () => {
   return (
     <section className="homepageCardSize customContainer">
       <div className="customHomepageSection bg-primary  flex flex-col sm:flex-row ">
-        <div className="flex flex-col gap-6 w-full  sm:p-10 md:p-6 ">
+        <div className="flex flex-col gap-10 w-full  sm:p-10 md:p-6 ">
           <h1 className="text-secondary headerText1">Card Issuing</h1>
           <p className="text-white paragraphText1">
             Quickly issue cards and process card payments through our single API
