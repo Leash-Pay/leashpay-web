@@ -21,7 +21,7 @@ const SingleListItem = ({ text }: { text: string }) => {
 const EasilyGetPaidSection = () => {
   return (
     <section className="customContainer  w-full   h-[50rem] sm:h-[38rem]">
-      <div className="  bg-[url('/assets/img/bg/happy-lad-mobile.jpeg')] sm:bg-[url('/assets/img/bg/happy-lad.jpeg')] h-full bg-cover rounded-[50px] bg-center p-5 flex flex-col sm:flex-row">
+      <div className="  bg-[url('/assets/img/bg/happy-lad-mobile.jpeg')] sm:bg-[url('/assets/img/bg/happy-lad.jpeg')] h-full bg-cover rounded-[50px] bg-center p-5 flex flex-col sm:flex-row md:pl-16">
         <div className="w-full flex flex-col justify-end sm:justify-around h-full gap-4  sm:p-10 md:p-6 ">
           <div className="hidden sm:block my-8"></div>
           <h1 className="headerText1 text-secondary ">Easily get paid</h1>

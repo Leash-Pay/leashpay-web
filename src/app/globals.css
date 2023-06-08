@@ -14,6 +14,10 @@ body {
   background-color: #F7F7F7;
 }
 
+.customHomepageSection {
+  @apply rounded-[50px] h-full w-full md:pl-16 p-5 py-10 gap-10  items-center
+}
+
 .customContainer {
   @apply container mx-auto px-5 sm:px-0
 }

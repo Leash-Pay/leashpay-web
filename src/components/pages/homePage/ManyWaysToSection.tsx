@@ -17,7 +17,7 @@ const SingleListItem = ({ logo }: { logo: string }) => {
 const ManyWaysToSection = () => {
   return (
     <section className="customContainer w-full h-full ">
-      <div className="flex flex-col md:flex-row gap-10 bg-white p-5 rounded-[50px] items-center  py-10">
+      <div className="flex flex-col md:flex-row  bg-white customHomepageSection">
         <div className="flex flex-col gap-6 w-full  sm:p-10 md:p-6  ">
           <h1 className="text-secondary headerText1">Many ways to get paid</h1>
           <p className="text-primary paragraphText1">
