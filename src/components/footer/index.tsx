@@ -10,20 +10,20 @@ const poppins = Poppins({
 
 const NavItems = () => {
   return (
-    <ul className="text-white text-lg flex flex-col gap-3.5">
-      <div className="text-secondary font-medium uppercase tracking-widest my-3">
+    <ul className="text-white text-lg flex flex-col gap-3.5 w-full ">
+      <div className="text-secondary font-medium sm:text-base uppercase tracking-widest my-3">
         About
       </div>
-      <li>
+      <li className="hover:underline decoration-secondary underline-offset-4">
         <Link href="/">About</Link>
       </li>
-      <li>
+      <li className="hover:underline decoration-secondary underline-offset-4">
         <Link href="/">Solutions</Link>
       </li>
-      <li>
+      <li className="hover:underline decoration-secondary underline-offset-4">
         <Link href="/">Pricing</Link>
       </li>
-      <li>
+      <li className="hover:underline decoration-secondary underline-offset-4">
         <Link href="/">Privacy Policy</Link>
       </li>
     </ul>
@@ -32,8 +32,8 @@ const NavItems = () => {
 
 const Company = () => {
   return (
-    <ul className="text-white text-lg flex flex-col ">
-      <div className="text-secondary font-medium uppercase tracking-widest my-3">
+    <ul className="text-white text-lg flex flex-col w-full ">
+      <div className="text-secondary font-medium sm:text-base uppercase tracking-widest mt-3 mb-6">
         Company
       </div>
       <li>Teshie Rasta Bushroad,</li>
@@ -49,28 +49,28 @@ const Company = () => {
 
 const index = () => {
   return (
-    <section className={`w-full  bg-primary border border-[#707070] `}>
-      <div className="flex flex-col justify-between gap-12 customContainer mt-20 mb-10">
-        <div className="flex flex-col gap-10">
-          <h1 className="text-secondary headerText1 leading-[4.5rem]">
-            Start growing your business with us
-          </h1>
+    <section className={`w-full  bg-primary border border-[#707070] pb-8 `}>
+      <div className="container mx-auto px-10 sm:px-20 mt-20 ">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10">
+          <div className="flex flex-col gap-14 sm:col-span-2 ">
+            <h1 className="text-secondary headerText1 leading-[4.5rem] md:leading-[4.5rem]">
+              Start growing your business with us
+            </h1>
 
-          <div>
-            <PrimaryButton text="Get Started" type={2} />
+            <div>
+              <PrimaryButton text="Get Started" type={2} />
+            </div>
           </div>
-        </div>
 
-        <NavItems />
-        <NavItems />
-        <Company />
-
-        {/* <hr className="  border-white border-[0.5px] w-full " /> */}
-        <div className="border-t pt-6 mt-10 -mx-6">
-          <p className="text-xs text-white text-center">
-            © 2023 LeashPay. All Rights Reserved.
-          </p>
+          <NavItems />
+          <NavItems />
+          <Company />
         </div>
+      </div>
+      <div className="border-t pt-6 mt-20 sm:mt-60 -mx-6">
+        <p className="text-xs text-white text-center">
+          © 2023 LeashPay. All Rights Reserved.
+        </p>
       </div>
     </section>
   );

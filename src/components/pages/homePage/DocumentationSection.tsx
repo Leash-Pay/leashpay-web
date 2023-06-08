@@ -5,7 +5,7 @@ import React from "react";
 const DocumentationSection = () => {
   return (
     <section className=" customContainer">
-      <div className="bg-transparent flex flex-col sm:flex-row customHomepageSection">
+      <div className="bg-transparent flex flex-col lg:flex-row customHomepageSection">
         <div className="flex flex-col gap-10 w-full  sm:p-10 md:p-6 ">
           <h1 className="text-secondary headerText1 md:leading-[4.5rem]">
             Explore our guides and documentation.
@@ -21,10 +21,12 @@ const DocumentationSection = () => {
           </div>
         </div>
 
-        <div className="w-full  h-fit">
+        <div className="w-full ">
           <CodeBlock
             code={`
-const terminal = LeashPay.create({ onFetchConnectionToken: server.fetchConnectionToken });
+const terminal = LeashPay.create({ 
+    onFetchConnectionToken: server.fetchConnectionToken 
+});
 const result = await terminal.discoverReaders();
 const reader = result.discoveredReaders[0];
 await terminal.connectReader(reader);
