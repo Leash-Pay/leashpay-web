@@ -5,6 +5,7 @@ import HeroSection from "@/components/pages/homePage/HeroSection";
 import InvoicingSection from "@/components/pages/homePage/InvoicingSection";
 import JusBuildSection from "@/components/pages/homePage/JusBuildSection";
 import ManyWaysToSection from "@/components/pages/homePage/ManyWaysToSection";
+import TrustSection from "@/components/pages/homePage/TrustSection";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
         <ManyWaysToSection />
         <CardIssuingSection />
         <InvoicingSection />
+        <TrustSection />
         <div className="my-10"></div>
       </div>
     </MainLayout>

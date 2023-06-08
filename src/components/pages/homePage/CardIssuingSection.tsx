@@ -3,7 +3,7 @@ import React from "react";
 
 const CardIssuingSection = () => {
   return (
-    <section className="customContainer w-full">
+    <section className="homepageCardSize customContainer">
       <div className="customHomepageSection bg-primary  flex flex-col sm:flex-row ">
         <div className="flex flex-col gap-6 w-full  sm:p-10 md:p-6 ">
           <h1 className="text-secondary headerText1">Card Issuing</h1>
