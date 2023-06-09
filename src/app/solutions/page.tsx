@@ -4,6 +4,7 @@ import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import PageTransition from "@/components/animations/PageTransition";
 import MissionVisionSection from "@/components/pages/about/MissionVisionSection";
+import CoreValueSection from "@/components/pages/about/CoreValueSection";
 
 const Page = () => {
   return (
@@ -35,6 +36,7 @@ const Page = () => {
       </div>
       <main className="flex flex-col">
         <MissionVisionSection />
+        <CoreValueSection />
         <div className="my-10"></div>
       </main>
 
