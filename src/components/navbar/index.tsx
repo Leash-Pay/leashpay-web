@@ -22,10 +22,12 @@ const index = () => {
 
           <div className="hidden lg:flex justify-between  w-full text-primary font-medium  ml-10 text-xl">
             <button>
-              <Link href="/solutions">Solutions</Link>
+              <Link href="/">Solutions</Link>
             </button>
             <button>Developers</button>
-            <button>Company</button>
+            <button>
+              <Link href="/company">Company</Link>
+            </button>
             <button>Pricing</button>
 
             <PrimaryButton text="Get Started" />

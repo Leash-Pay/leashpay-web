@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useCallback, useRef } from "react";
-import type { Swiper as SwiperType } from "swiper";
+import { Autoplay, Swiper as SwiperType } from "swiper";
 import SwiperCore from "swiper";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -53,7 +53,7 @@ const CoreValueSection = () => {
             loop={true}
             mousewheel={true}
             autoplay={{
-              delay: 500,
+              delay: 1500,
             }}
             breakpoints={{
               640: {
@@ -66,7 +66,7 @@ const CoreValueSection = () => {
               prevEl: swiperNavPrevRef?.current,
               nextEl: swiperNavNextRef?.current,
             }}
-            modules={[Navigation]}
+            modules={[Navigation, Autoplay]}
             keyboard={true}
             className="w-screen  sm:w-full  h-20  flex justify-between "
           >

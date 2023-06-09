@@ -3,8 +3,9 @@ import React from "react";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import PageTransition from "@/components/animations/PageTransition";
-import MissionVisionSection from "@/components/pages/about/MissionVisionSection";
-import CoreValueSection from "@/components/pages/about/CoreValueSection";
+import MissionVisionSection from "@/components/pages/company/MissionVisionSection";
+import CoreValueSection from "@/components/pages/company/CoreValueSection";
+import MeetOutTeamSection from "@/components/pages/company/MeetOutTeamSection";
 
 const Page = () => {
   return (
@@ -34,11 +35,14 @@ const Page = () => {
           </div>
         </div>
       </div>
-      <main className="flex flex-col">
-        <MissionVisionSection />
-        <CoreValueSection />
-        <div className="my-10"></div>
-      </main>
+      <PageTransition>
+        <main className="flex flex-col">
+          <MissionVisionSection />
+          <CoreValueSection />
+          <MeetOutTeamSection />
+          <div className="my-10"></div>
+        </main>
+      </PageTransition>
 
       <Footer />
     </div>
