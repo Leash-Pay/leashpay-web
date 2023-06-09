@@ -50,7 +50,7 @@ const Company = () => {
 const index = () => {
   return (
     <section className={`w-full  bg-primary border border-[#707070] pb-8 `}>
-      <div className="container mx-auto px-10 sm:px-20 mt-20 ">
+      <div className="container mx-auto px-10 sm:px-20 mt-20 max-w-7xl">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10">
           <div className="flex flex-col gap-14 sm:col-span-2 ">
             <h1 className="text-secondary headerText1 leading-[4.5rem] md:leading-[4.5rem]">

@@ -6,7 +6,7 @@ import Link from "next/link";
 const index = () => {
   return (
     <nav className=" w-full ">
-      <div className="container mx-auto px-4 sm:px-0">
+      <div className="container mx-auto px-4 sm:px-0 max-w-7xl">
         <div className=" flex w-full justify-between bg-[#FFFFFF]  px-4 md:px-8 py-3 rounded-[25px] shadow-xl  mt-6">
           <div className="w-full md:w-[60%]  flex items-start justify-center flex-col">
             <Link href="/">

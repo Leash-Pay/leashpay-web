@@ -9,8 +9,7 @@ const Page = () => {
     <div className="h-full w-full  ">
       <div className="border border-primary h-[145vh] sm:h-[90vh] bg-[url('/assets/img/bg/about-mobile.jpeg')] sm:bg-[url('/assets/img/bg/about.jpeg')] bg-cover bg-right">
         <Navbar />
-
-        <div className="flex flex-row justify-between h-full">
+        <div className="flex flex-row justify-between h-full container mx-auto sm:px-10">
           <div className="w-full border h-full"></div>
           <div className="customContainer flex flex-col mt-16 gap-8 border order-first justify-center ">
             <div className="border flex flex-col gap-8">
