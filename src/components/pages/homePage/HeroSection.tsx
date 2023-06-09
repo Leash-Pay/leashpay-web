@@ -5,7 +5,7 @@ import React from "react";
 const HeroSection = () => {
   return (
     <section className=" flex   flex-col  justify-center items-center  md:bg-[url('/assets/img/hero-bg.png')] bg-no-repeat md:bg-right md:bg-contain  ">
-      <div className=" w-full h-full container mx-auto px-10 max-w-7xl flex flex-col md:flex-row justify-between items-center gap-16 ">
+      <div className=" w-full h-full container mx-auto px-8 max-w-7xl flex flex-col md:flex-row justify-between items-center gap-16 ">
         <div className="flex flex-col gap-10    max-w-lg">
           <h1 className="font-bold text-4xl md:text-5xl text-primary leading-[3rem] md:leading-[3.5rem] ">
             Financial tools <br /> that power your <br /> business
