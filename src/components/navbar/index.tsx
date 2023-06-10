@@ -30,7 +30,7 @@ const CustomLinkButton = ({ text, href = "/" }: CustomLinkButtonProps) => {
   );
 };
 
-const index = () => {
+const Index = () => {
   const [openMobileMenu, setOpenMobileMenu] = useState(false);
   const mobileMenuRef = useRef<HTMLDivElement>(null);
 
@@ -172,4 +172,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;
