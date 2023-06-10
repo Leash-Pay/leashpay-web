@@ -154,7 +154,10 @@ const Index = () => {
                     </h1>
 
                     <div className="flex gap-2 flex-col">
-                      <CustomLinkButton text="Online Payment" />
+                      <CustomLinkButton
+                        text="Online Payment"
+                        href="/onlinepayment"
+                      />
                       <CustomLinkButton text="In-person Payment" />
                       <CustomLinkButton text="Company" href="/company" />
                     </div>
