@@ -31,7 +31,7 @@ const CustomLinkButton = ({ text, href = "/" }: CustomLinkButtonProps) => {
 };
 
 const index = () => {
-  const [openMobileMenu, setOpenMobileMenu] = useState(true);
+  const [openMobileMenu, setOpenMobileMenu] = useState(false);
   const mobileMenuRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
