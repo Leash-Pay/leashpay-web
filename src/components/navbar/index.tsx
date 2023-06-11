@@ -158,7 +158,10 @@ const Index = () => {
                         text="Online Payment"
                         href="/onlinepayment"
                       />
-                      <CustomLinkButton text="In-person Payment" />
+                      <CustomLinkButton
+                        text="In-person Payment"
+                        href="/inpersonpayment"
+                      />
                       <CustomLinkButton text="Company" href="/company" />
                     </div>
                   </div>
