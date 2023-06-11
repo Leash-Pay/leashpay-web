@@ -30,7 +30,7 @@ const CustomLinkButton = ({ text, href = "/" }: CustomLinkButtonProps) => {
   );
 };
 
-const index = () => {
+const Index = () => {
   const [openMobileMenu, setOpenMobileMenu] = useState(false);
   const mobileMenuRef = useRef<HTMLDivElement>(null);
 
@@ -154,7 +154,10 @@ const index = () => {
                     </h1>
 
                     <div className="flex gap-2 flex-col">
-                      <CustomLinkButton text="Online Payment" />
+                      <CustomLinkButton
+                        text="Online Payment"
+                        href="/onlinepayment"
+                      />
                       <CustomLinkButton text="In-person Payment" />
                       <CustomLinkButton text="Company" href="/company" />
                     </div>
@@ -172,4 +175,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;
