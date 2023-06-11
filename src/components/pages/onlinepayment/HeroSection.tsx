@@ -4,9 +4,9 @@ import React from "react";
 
 const HeroSection = () => {
   return (
-    <section className=" flex   flex-col  justify-center items-center  md:bg-[url('/assets/img/hero-bg.png')] bg-no-repeat md:bg-right md:bg-contain  ">
+    <section className=" flex   flex-col  justify-center items-center    bg-no-repeat md:bg-right md:bg-contain     h-full md:h-[38rem]">
       <div className=" w-full h-full container mx-auto px-8 max-w-7xl flex flex-col md:flex-row justify-between items-center gap-16 ">
-        <div className="flex flex-col gap-10    max-w-lg">
+        <div className="flex flex-col gap-10 w-full    max-w-lg  ">
           <h1 className="font-bold text-4xl md:text-5xl text-secondary leading-[3rem] md:leading-[3.5rem] ">
             Accept payment online with confidence
           </h1>
@@ -21,28 +21,29 @@ const HeroSection = () => {
           </div>
         </div>
 
-        <div className="w-screen md:w-full hidden md:flex    bg-no-repeat bg-cover  flex-col justify-center items-center p-5 sm:p-0 bg-center sm:bg-left  border-yellow-600">
-          <div className=" w-2/3  relative sm:top-10">
+        <div className="w-full md:w-full hidden md:flex relative  h-full flex-col justify-center items-center     ">
+          <div className="  w-full absolute xl:left-10     ">
             <Image
-              src="/assets/img/phone-sample.png"
+              src="/assets/img/lp-image1.png"
               alt="phone"
-              height={673}
-              width={415}
-              blurDataURL="/assets/img/phone-sample.png"
-              className="w-full sm:w-2/3 "
+              height={2985}
+              width={3662}
+              blurDataURL="/assets/img/lp-image1.png"
+              className="w-full  object-cover "
             />
           </div>
         </div>
 
-        <div className="w-screen md:hidden md:w-full  bg-[url('/assets/img/hero-bg.png')]   bg-no-repeat bg-cover flex flex-col justify-center items-center p-5 sm:p-0 bg-center sm:bg-left  border-yellow-600">
-          <div className=" w-2/3  relative sm:top-10">
+        {/* mobile */}
+        <div className="w-screen md:hidden h-[25rem] sm:h-[35rem] relative   flex flex-col justify-center items-center  ">
+          <div className=" w-full absolute  -mx-4  h-full ">
             <Image
-              src="/assets/img/phone-sample.png"
+              src="/assets/img/lp-image1.png"
               alt="phone"
-              height={673}
-              width={415}
-              blurDataURL="/assets/img/phone-sample.png"
-              className="w-full sm:w-2/3 "
+              height={2985}
+              width={3662}
+              blurDataURL="/assets/img/lp-image1.png"
+              className="w-full  h-full object-cover object-left"
             />
           </div>
         </div>
