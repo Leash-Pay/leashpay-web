@@ -1,5 +1,5 @@
 import MainLayout from "@/components/layouts/MainLayout";
-import DashboardSection from "@/components/pages/onlinepayment/DashboardSection";
+import DashboardSection from "@/components/pages/inpersonpayment/DashboardSection";
 import HeroSection from "@/components/pages/onlinepayment/HeroSection";
 import PaymentLinkSection from "@/components/pages/onlinepayment/PaymentLinkSection";
 import RightForYouSection from "@/components/pages/onlinepayment/RightForYouSection";
@@ -15,7 +15,7 @@ const Page = () => {
         <RightForYouSection />
         <PaymentLinkSection />
         <DashboardSection />
-        <div className="my-10"></div>
+        <div className="my-4"></div>
       </div>
     </MainLayout>
   );
