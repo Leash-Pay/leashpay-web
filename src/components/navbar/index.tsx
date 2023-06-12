@@ -167,7 +167,7 @@ const Index = () => {
                   </div>
                 </div>
                 <div className="flex justify-center">
-                  <PrimaryButton text="Get Started" />
+                  <PrimaryButton text="Get Started" href="/signin" />
                 </div>
               </div>
             )}
