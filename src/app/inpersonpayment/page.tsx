@@ -2,6 +2,7 @@ import MainLayout from "@/components/layouts/MainLayout";
 import HardColorSections from "@/components/pages/inpersonpayment/HardColorSections";
 import HeroSection from "@/components/pages/inpersonpayment/HeroSection";
 import SmartTerminalSection from "@/components/pages/inpersonpayment/SmartTerminalSection";
+import DashboardSection from "@/components/pages/inpersonpayment/DashboardSection";
 import React from "react";
 
 const Page = () => {
@@ -20,6 +21,7 @@ const Page = () => {
           iconName="card"
           className={`bg-[#F79400]`}
           iconSize={{ widht: 2190, height: 1375 }}
+          additionalDesktopClasses="-top-6"
         />
 
         <HardColorSections
@@ -29,6 +31,8 @@ const Page = () => {
           iconName="pos"
           className={`bg-[#E86000]`}
           iconSize={{ widht: 1153, height: 860 }}
+          order={"first"}
+          additionalDesktopClasses="-top-4"
         />
 
         <HardColorSections
@@ -38,7 +42,10 @@ const Page = () => {
           iconName="phone"
           className={`bg-[#008999]`}
           iconSize={{ widht: 1041, height: 623 }}
+          additionalDesktopClasses="-top-10 left-4 "
         />
+        <div className="my-2"></div>
+        <DashboardSection />
         <div className="my-10"></div>
       </div>
     </MainLayout>

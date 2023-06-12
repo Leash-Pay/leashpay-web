@@ -21,7 +21,15 @@ interface IndividualTeamCardProps {
 const IndividualTeamCard = ({ name, role }: IndividualTeamCardProps) => {
   return (
     <div className="w-full">
-      <div className="h-[390px] w-full  bg-[#AFAFAF] rounded-[25px]"></div>
+      <div className="h-[390px] w-full  bg-[#AFAFAF] rounded-[30px] relative ">
+        <Image
+          src="/assets/img/team/emmanuel.jpeg"
+          alt="pciture team"
+          className="border border-primary rounded-[20px] object-cover object-center"
+          unoptimized
+          fill
+        />
+      </div>
       <div className="flex flex-col ml-4 my-4">
         <h1 className="text-secondary font-bold text-2xl">{name}</h1>
         <p className="text-primary text-base">{role}</p>
@@ -71,25 +79,25 @@ const MeetOutTeamSection = () => {
           >
             <SwiperSlide>
               <IndividualTeamCard
-                name="1Emmanuel J. K. Gbordzor"
+                name="Emmanuel J. K. Gbordzor"
                 role="Director"
               />
             </SwiperSlide>
             <SwiperSlide>
               <IndividualTeamCard
-                name="2Emmanuel J. K. Gbordzor"
+                name="Emmanuel J. K. Gbordzor"
                 role="Director"
               />
             </SwiperSlide>
             <SwiperSlide>
               <IndividualTeamCard
-                name="3Emmanuel J. K. Gbordzor"
+                name="Emmanuel J. K. Gbordzor"
                 role="Director"
               />
             </SwiperSlide>
             <SwiperSlide>
               <IndividualTeamCard
-                name="4Emmanuel J. K. Gbordzor"
+                name="Emmanuel J. K. Gbordzor"
                 role="Director"
               />
             </SwiperSlide>

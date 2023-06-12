@@ -33,7 +33,7 @@ body {
 
 
 .homepageCardSize {
-  @apply h-[567px] sm:h-[549px] w-full
+  @apply h-[567px] sm:h-[500px] w-full
 }
 
 .customHomepageSection {
@@ -45,9 +45,9 @@ body {
 }
 
 .headerText1 {
-  @apply text-4xl md:text-6xl font-bold
+  @apply text-4xl md:text-5xl font-bold
 }
 
 .paragraphText1 {
-  @apply text-base sm:text-xl
+  @apply text-base sm:text-lg
 }

@@ -1,7 +1,7 @@
 interface PrimaryButtonProps {
   text: string;
   onClickHandler?: () => void;
-  type?: 1 | 2;
+  type?: 1 | 2 | 3;
 }
 
 const PrimaryButton = ({
@@ -13,9 +13,13 @@ const PrimaryButton = ({
     <button
       className={` group
        ${
-         type === 1 ? "bg-primary text-white" : "bg-white text-primary"
+         type === 1
+           ? "bg-primary text-white hover:bg-secondary "
+           : type === 2
+           ? "bg-white text-primary hover:bg-secondary "
+           : "bg-primary text-white hover:bg-white hover:text-primary"
        } rounded-[40px] h-auto w-auto  px-6  whitespace-nowrap py-3  uppercase  font-extralight 
-    hover:bg-secondary 
+    
        transition-all  transform hover:scale-x-105
     
     `}

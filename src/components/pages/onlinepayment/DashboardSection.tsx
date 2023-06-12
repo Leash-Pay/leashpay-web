@@ -22,7 +22,7 @@ const DashboardSection = () => {
         </div>
         <div className="w-full  h-full ">
           <Image
-            src="/assets/img/payment/checkout2.png"
+            src="/assets/img/dashboard.png"
             alt="checkout1"
             height={1944}
             width={3304}
