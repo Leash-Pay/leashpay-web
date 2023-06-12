@@ -29,12 +29,9 @@ const PrimaryButton = ({
     `}
     >
       {href ? (
-        <Link
-          href={href}
-          className="group-hover:scale-75 transition-all  transform ease-in-out text-xs"
-        >
-          {text}
-        </Link>
+        <div className="group-hover:scale-75 transition-all  transform ease-in-out text-xs">
+          <Link href={href}>{text}</Link>
+        </div>
       ) : (
         <div className="group-hover:scale-75 transition-all  transform ease-in-out text-xs">
           {text}
@@ -48,7 +45,7 @@ const SecondaryButton = ({ text, onClickHandler }: PrimaryButtonProps) => {
   return (
     <button
       className={` group
-      border bg-primary rounded-[40px] h-auto w-auto text-white px-6  whitespace-nowrap py-4  uppercase  font-extralight
+      border bg-primary rounded-[40px] h-auto w-auto text-white px-10  whitespace-nowrap py-4  uppercase  font-extralight
     hover:bg-white hover:text-primary hover:border-primary
       text-sm transition-all  transform hover:scale-105
 

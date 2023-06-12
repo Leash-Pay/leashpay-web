@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 import { FiEyeOff, FiEye } from "react-icons/fi";
+import { text } from "stream/consumers";
 
 interface InputComponentProps {
   label: string;
@@ -75,23 +76,38 @@ const page = () => {
 
           <section className="bg-white  w-full px-5 py-10 mt-10 rounded-[25px] shadow-sm flex flex-col gap-6 col-span-2">
             <h1 className="text-3xl font-bold text-primary leading-[2.6rem]">
-              Sign in to your LeashPay account
+              Create your LeashPay account
             </h1>
             <div className="flex flex-col gap-3">
               <InputComponent label="Email" type="email" />
+              <InputComponent label="Full name" type={"text"} />
+              <InputComponent label="Country" type={"text"} />
               <InputComponent label="Password" type={"password"} />
-              <div className=" flex justify-end mr-3">
-                <p className="text-primary">Forgot password?</p>
+              <div className=" flex  justify-between items-start gap-3 ">
+                <div className=" h-full">
+                  <input
+                    type="checkbox"
+                    name=""
+                    id=""
+                    className="border border-primary h-6 w-6 rounded-[50px]"
+                  />
+                </div>
+                <p className="text-primary text-sm">
+                  Get emails from LeashPay about product updates, industry news,
+                  and events. If you change your mind, you can unsubscribe at
+                  any time. <br />{" "}
+                  <span className="text-secondary">Privacy Policy</span>
+                </p>
               </div>
             </div>
             <div className="flex justify-center mt-6 ">
-              <SecondaryButton text="Sign in" />
+              <SecondaryButton text="Create Account" />
             </div>
             <div className="flex justify-center mt-2">
               <p className="text-primary">
-                Don't have an account?{" "}
-                <Link href="/signup" className="text-secondary">
-                  Sign up
+                Have an account?{" "}
+                <Link href="/signin" className="text-secondary">
+                  Sign in
                 </Link>
               </p>
             </div>
