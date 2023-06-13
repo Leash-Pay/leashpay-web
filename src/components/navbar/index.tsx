@@ -74,7 +74,7 @@ const Index = () => {
             </button>
             <button>Pricing</button>
 
-            <PrimaryButton text="Get Started" />
+            <PrimaryButton text="Get Started" href="/signin" />
           </div>
 
           <div className="lg:hidden w-full  flex items-center justify-end ">
@@ -167,7 +167,7 @@ const Index = () => {
                   </div>
                 </div>
                 <div className="flex justify-center">
-                  <PrimaryButton text="Get Started" />
+                  <PrimaryButton text="Get Started" href="/signin" />
                 </div>
               </div>
             )}
