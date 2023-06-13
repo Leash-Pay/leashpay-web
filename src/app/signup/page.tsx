@@ -89,7 +89,7 @@ const page = () => {
                     type="checkbox"
                     name=""
                     id=""
-                    className="border border-primary h-6 w-6 rounded-[50px]"
+                    className="border border-primary h-6 w-6 rounded-[5im0px]"
                   />
                 </div>
                 <p className="text-primary text-sm">

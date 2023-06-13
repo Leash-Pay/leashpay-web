@@ -89,7 +89,7 @@ const page = () => {
             </div>
             <div className="flex justify-center mt-2">
               <p className="text-primary">
-                Don't have an account?{" "}
+                Don&lsquo;t have an account?{" "}
                 <Link href="/signup" className="text-secondary">
                   Sign up
                 </Link>
