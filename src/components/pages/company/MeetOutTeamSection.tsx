@@ -22,13 +22,13 @@ const IndividualTeamCard = ({ name, role }: IndividualTeamCardProps) => {
   return (
     <div className="w-full">
       <div className="h-[390px] w-full  bg-[#AFAFAF] rounded-[30px] relative ">
-        <Image
+        {/* <Image
           src="/assets/img/team/emmanuel.jpeg"
           alt="pciture team"
           className="border border-primary rounded-[20px] object-cover object-center"
           unoptimized
           fill
-        />
+        /> */}
       </div>
       <div className="flex flex-col ml-4 my-4">
         <h1 className="text-secondary font-bold text-2xl">{name}</h1>
@@ -78,28 +78,16 @@ const MeetOutTeamSection = () => {
             className="w-full  h-full"
           >
             <SwiperSlide>
-              <IndividualTeamCard
-                name="Emmanuel J. K. Gbordzor"
-                role="Director"
-              />
+              <IndividualTeamCard name="John Doe" role="Director" />
             </SwiperSlide>
             <SwiperSlide>
-              <IndividualTeamCard
-                name="Emmanuel J. K. Gbordzor"
-                role="Director"
-              />
+              <IndividualTeamCard name="John Doe" role="Director" />
             </SwiperSlide>
             <SwiperSlide>
-              <IndividualTeamCard
-                name="Emmanuel J. K. Gbordzor"
-                role="Director"
-              />
+              <IndividualTeamCard name="John Doe" role="Director" />
             </SwiperSlide>
             <SwiperSlide>
-              <IndividualTeamCard
-                name="Emmanuel J. K. Gbordzor"
-                role="Director"
-              />
+              <IndividualTeamCard name="John Doe" role="Director" />
             </SwiperSlide>
           </Swiper>
         </div>
@@ -143,30 +131,12 @@ const MeetOutTeamSection = () => {
           </div>
 
           <div className=" w-full h-full grid grid-cols-2 lg:grid-cols-3 gap-y-20 mt-20 gap-x-20">
-            <IndividualTeamCard
-              name="1Emmanuel J. K. Gbordzor"
-              role="Director"
-            />
-            <IndividualTeamCard
-              name="1Emmanuel J. K. Gbordzor"
-              role="Director"
-            />
-            <IndividualTeamCard
-              name="1Emmanuel J. K. Gbordzor"
-              role="Director"
-            />
-            <IndividualTeamCard
-              name="1Emmanuel J. K. Gbordzor"
-              role="Director"
-            />
-            <IndividualTeamCard
-              name="1Emmanuel J. K. Gbordzor"
-              role="Director"
-            />
-            <IndividualTeamCard
-              name="1Emmanuel J. K. Gbordzor"
-              role="Director"
-            />
+            <IndividualTeamCard name="John Doe" role="Director" />
+            <IndividualTeamCard name="John Doe" role="Director" />
+            <IndividualTeamCard name="John Doe" role="Director" />
+            <IndividualTeamCard name="John Doe" role="Director" />
+            <IndividualTeamCard name="John Doe" role="Director" />
+            <IndividualTeamCard name="John Doe" role="Director" />
           </div>
         </div>
       </div>
