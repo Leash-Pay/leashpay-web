@@ -13,8 +13,8 @@ const CustomLinkButton = ({ text, href = "/" }: CustomLinkButtonProps) => {
   return (
     <div className="bg-[#F8F8F8] px-4 py-2  rounded-[20px] flex justify-between items-center">
       <div className="flex justify-between items-center gap-3">
-        <div className="h-10 w-10 rounded-full bg-gradient-to-r from-[#E86000] to-[#F79400]"></div>
-        <p className="text-primary font-base">{text}</p>
+        <div className="h-8 w-8 rounded-full bg-gradient-to-r from-[#E86000] to-[#F79400]"></div>
+        <p className="text-primary lg:text-sm">{text}</p>
       </div>
       <button>
         <Link href={href}>
@@ -32,12 +32,18 @@ const CustomLinkButton = ({ text, href = "/" }: CustomLinkButtonProps) => {
 
 const Index = () => {
   const [openMobileMenu, setOpenMobileMenu] = useState(false);
+  const [openSolutionsDropdown, setOpenSolutionsDropdown] = useState(false);
+
   const mobileMenuRef = useRef<HTMLDivElement>(null);
+  const solutionsDropdownRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     let clickHandler = (e: any) => {
       if (!mobileMenuRef.current?.contains(e.target)) {
         setOpenMobileMenu(false);
+      }
+      if (!solutionsDropdownRef.current?.contains(e.target)) {
+        setOpenSolutionsDropdown(false);
       }
     };
 
@@ -51,7 +57,7 @@ const Index = () => {
     <nav className=" w-full ">
       <div className="container mx-auto px-5  max-w-7xl  ">
         {/* desktop */}
-        <div className="hidden lg:flex w-full justify-between bg-[#FFFFFF]  px-4 md:px-8 py-3 rounded-[25px] shadow-xl  mt-6 ">
+        <div className="hidden relative lg:flex w-full justify-between bg-[#FFFFFF]  px-4  md:px-8 py-3 rounded-[25px] shadow-xl  mt-6 ">
           <div className="w-full md:w-[60%]  flex items-start justify-center flex-col">
             <Link href="/">
               <Image
@@ -64,9 +70,12 @@ const Index = () => {
             </Link>
           </div>
 
-          <div className="hidden lg:flex justify-between  w-full text-primary font-medium  ml-10 text-xl">
-            <button>
-              <Link href="/">Solutions</Link>
+          <div className="hidden lg:flex justify-between  w-full text-primary font-medium  ml-10 text-xl items-center">
+            <button
+              onMouseEnter={() => setOpenSolutionsDropdown(true)}
+              // onMouseLeave={() => setOpenSolutionsDropdown(false)}
+            >
+              Solutions
             </button>
             <button>Developers</button>
             <button>
@@ -89,6 +98,75 @@ const Index = () => {
               />
             </button>
           </div>
+          {/* desktop solutions dropdown */}
+          {openSolutionsDropdown && (
+            <div
+              ref={solutionsDropdownRef}
+              className="w-[80%] left-12 border absolute top-[5.3rem] h-fit z-20 bg-white rounded-[25px] shadow-sm px-16 py-8"
+              onMouseLeave={() => setOpenSolutionsDropdown(false)}
+            >
+              <div className="flex flex-col justify-between">
+                <div className="text-primary flex flex-col gap-2">
+                  <h1 className=" font-medium text-3xl">
+                    Digital payments infrastructure
+                  </h1>
+                  <p className="text-sm">
+                    Deploy, control, and orchestrate every product you&lsquo;ll
+                    need from one place.
+                  </p>
+                </div>
+                <div className="grid grid-cols-2 xl:grid-cols-3 mt-10 w-full gap-10">
+                  <div className=" w-full ">
+                    <h1 className="text-secondary font-medium text-base">
+                      Accept payments
+                    </h1>
+                    <div className="flex flex-col gap-3 mt-6">
+                      <CustomLinkButton
+                        text="Online Payment"
+                        href="/onlinepayment"
+                      />
+                      <CustomLinkButton
+                        text="In-person Payment"
+                        href="/inpersonpayment"
+                      />
+                    </div>
+                  </div>
+
+                  <div className=" w-full">
+                    <h1 className="text-secondary font-medium text-base">
+                      Accept payments
+                    </h1>
+                    <div className="flex flex-col gap-3 mt-6">
+                      <CustomLinkButton
+                        text="Online Payment"
+                        href="/onlinepayment"
+                      />
+                      <CustomLinkButton
+                        text="In-person Payment"
+                        href="/inpersonpayment"
+                      />
+                    </div>
+                  </div>
+
+                  <div className=" w-full">
+                    <h1 className="text-secondary font-medium text-base">
+                      Accept payments
+                    </h1>
+                    <div className="flex flex-col gap-3 mt-6">
+                      <CustomLinkButton
+                        text="Online Payment"
+                        href="/onlinepayment"
+                      />
+                      <CustomLinkButton
+                        text="In-person Payment"
+                        href="/inpersonpayment"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
         </div>
         {/* mobile */}
         <div
