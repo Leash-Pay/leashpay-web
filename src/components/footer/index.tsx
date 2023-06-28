@@ -1,7 +1,9 @@
+"use client";
 import React from "react";
 import { PrimaryButton } from "../customUI";
 import Link from "next/link";
 import { Poppins } from "next/font/google";
+import { motion } from "framer-motion";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -15,16 +17,32 @@ const NavItems = () => {
         About
       </div>
       <li className="hover:underline decoration-secondary underline-offset-4">
-        <Link href="/">About</Link>
+        <Link href="/company">About</Link>
       </li>
       <li className="hover:underline decoration-secondary underline-offset-4">
-        <Link href="/">Solutions</Link>
+        <Link href="/inpersonpayment">Solutions</Link>
       </li>
       <li className="hover:underline decoration-secondary underline-offset-4">
         <Link href="/">Pricing</Link>
       </li>
       <li className="hover:underline decoration-secondary underline-offset-4">
         <Link href="/">Privacy Policy</Link>
+      </li>
+    </ul>
+  );
+};
+
+const DevelopersNav = () => {
+  return (
+    <ul className="text-white text-lg flex flex-col gap-3.5 w-full uppercase">
+      <div className="text-secondary font-medium sm:text-base uppercase tracking-widest my-3">
+        Developers
+      </div>
+      <li className="hover:underline decoration-secondary underline-offset-4">
+        <Link href="/">API Documentation</Link>
+      </li>
+      <li className="hover:underline decoration-secondary underline-offset-4">
+        <Link href="/">SDK</Link>
       </li>
     </ul>
   );
@@ -47,6 +65,33 @@ const Company = () => {
   );
 };
 
+const SocialLinks = () => {
+  return (
+    <div>
+      <div className="text-secondary font-medium sm:text-base uppercase tracking-widest mt-3 mb-6">
+        Follow Us
+      </div>
+      <div className="flex gap-4">
+        <motion.button whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
+          <img src="/assets/icons/social/fb.svg" />
+        </motion.button>
+
+        <motion.button whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
+          <img src="/assets/icons/social/instagram.svg" />
+        </motion.button>
+
+        <motion.button whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
+          <img src="/assets/icons/social/twitter.svg" />
+        </motion.button>
+
+        <motion.button whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
+          <img src="/assets/icons/social/linkedin.svg" />
+        </motion.button>
+      </div>
+    </div>
+  );
+};
+
 const index = () => {
   return (
     <section className={`w-full  bg-primary border border-[#707070] pb-8 `}>
@@ -58,13 +103,13 @@ const index = () => {
             </h1>
 
             <div>
-              <PrimaryButton text="Get Started" type={2} />
+              <PrimaryButton text="Get Started" type={2} href="/signin" />
             </div>
           </div>
-
           <NavItems />
-          <NavItems />
+          <DevelopersNav />
           <Company />
+          <SocialLinks />
         </div>
       </div>
       <div className="border-t pt-6 mt-20 sm:mt-60 -mx-6">

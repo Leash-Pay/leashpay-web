@@ -11,7 +11,7 @@ interface CustomLinkButtonProps {
 
 const CustomLinkButton = ({ text, href = "/" }: CustomLinkButtonProps) => {
   return (
-    <div className="bg-[#F8F8F8] px-4 py-2  rounded-[20px] flex justify-between items-center">
+    <div className="bg-[#F8F8F8] hover:bg-[#eaedec] px-4 py-2  rounded-[20px] flex justify-between items-center group">
       <div className="flex justify-between items-center gap-3">
         <div className="h-8 w-8 rounded-full bg-gradient-to-r from-[#E86000] to-[#F79400]"></div>
         <p className="text-primary lg:text-sm">{text}</p>
@@ -72,16 +72,18 @@ const Index = () => {
 
           <div className="hidden lg:flex justify-between  w-full text-primary font-medium  ml-10 text-xl items-center">
             <button
+              className=" relative px-5"
               onMouseEnter={() => setOpenSolutionsDropdown(true)}
-              // onMouseLeave={() => setOpenSolutionsDropdown(false)}
+              onMouseLeave={() => setOpenSolutionsDropdown(false)}
             >
+              <div className="absolute  border-red-500  h-[240%]  w-full left-0"></div>
               Solutions
             </button>
-            <button>Developers</button>
-            <button>
+            <button className="px-5">Developers</button>
+            <button className="px-5">
               <Link href="/company">Company</Link>
             </button>
-            <button>Pricing</button>
+            <button className="px-5">Pricing</button>
 
             <PrimaryButton text="Get Started" href="/signin" />
           </div>
@@ -103,6 +105,8 @@ const Index = () => {
             <div
               ref={solutionsDropdownRef}
               className="w-[80%] left-12 border absolute top-[5.3rem] h-fit z-20 bg-white rounded-[25px] shadow-sm px-16 py-8"
+              // onMouseLeave={() => setOpenSolutionsDropdown(false)}
+              onMouseEnter={() => setOpenSolutionsDropdown(true)}
               onMouseLeave={() => setOpenSolutionsDropdown(false)}
             >
               <div className="flex flex-col justify-between">

@@ -29,7 +29,7 @@ const RightForYouSection = () => {
               </p>
             </div>
             <div className="hidden md:block">
-              <PrimaryButton text="Get Started" />
+              <PrimaryButton text="Get Started" href="/signin" />
             </div>
           </div>
           <div className="w-full  h-full ">
@@ -48,7 +48,7 @@ const RightForYouSection = () => {
             </p>
           </div>
           <div className="md:hidden ">
-            <PrimaryButton text="Get Started" />
+            <PrimaryButton text="Get Started" href="/signin" />
           </div>
         </div>
 
@@ -64,7 +64,7 @@ const RightForYouSection = () => {
             </p>
 
             <div className="hidden md:block">
-              <PrimaryButton text="Get Started" />
+              <PrimaryButton text="Get Started" href="/signin" />
             </div>
           </div>
           <div className="w-full  h-full ">
@@ -78,7 +78,7 @@ const RightForYouSection = () => {
           </div>
 
           <div className="md:hidden ">
-            <PrimaryButton text="Get Started" />
+            <PrimaryButton text="Get Started" href="/signin" />
           </div>
         </div>
       </div>

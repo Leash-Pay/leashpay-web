@@ -17,7 +17,7 @@ const Page = () => {
           description="We integrate with the most popular payment methods globally,
             allowing your customers to choose from credit and debit cards,
             mobile money and more."
-          href="/"
+          href="/signin"
           iconName="card"
           className={`bg-[#F79400]`}
           iconSize={{ widht: 2190, height: 1375 }}
@@ -27,7 +27,7 @@ const Page = () => {
         <HardColorSections
           title="POS Devices"
           description={`Accept in-person, contactless payments on POS hardware device`}
-          href="/"
+          href="/signin"
           iconName="pos"
           className={`bg-[#E86000]`}
           iconSize={{ widht: 1153, height: 860 }}
@@ -38,7 +38,7 @@ const Page = () => {
         <HardColorSections
           title="Tap to Pay Mobile Devices"
           description={`Accept in-person, contactless payments on compatible iPhone or Android devices—no extra hardware needed.`}
-          href="/"
+          href="/signin"
           iconName="phone"
           className={`bg-[#008999]`}
           iconSize={{ widht: 1041, height: 623 }}

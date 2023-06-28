@@ -17,7 +17,7 @@ const HeroSection = () => {
           </p>
 
           <div className="ml-2 sm:ml-0">
-            <PrimaryButton text="Get Started" />
+            <PrimaryButton text="Get Started" href="/signin" />
           </div>
         </div>
 
