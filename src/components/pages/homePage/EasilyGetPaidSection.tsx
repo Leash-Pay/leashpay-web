@@ -30,7 +30,7 @@ const EasilyGetPaidSection = () => {
             payments.
           </p>
           <div className="my-3">
-            <PrimaryButton text="Get Started" type={2} />
+            <PrimaryButton text="Get Started" type={2} href="/signin" />
           </div>
 
           <div className="flex flex-col gap-2.5 ">

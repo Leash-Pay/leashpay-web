@@ -34,7 +34,7 @@ const DashboardSection = () => {
               maintain your payments solution.
             </p>
             <div>
-              <PrimaryButton text="Get Started" />
+              <PrimaryButton text="Get Started" href="/signin" />
             </div>
           </div>
           <div className="hidden md:block w-full"></div>
