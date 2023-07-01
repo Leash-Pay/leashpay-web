@@ -6,10 +6,10 @@ const HorizontalRule = () => {
   return <hr className="border-primary my-10 -mx-2 lg:mx-0" />;
 };
 
-const PrivacyPolicyPage = () => {
+const TermsConditionsPage = () => {
   return (
     <MainLayout>
-      <div className="flex flex-col gap-20 md:mt-10 ">
+      <div className="flex flex-col gap-20 md:mt-10 text-sm">
         <div className="container mx-auto px-8  max-w-7xl text-[#787878] leading-relaxed">
           <h1 className="text-primary font-bold text-4xl md:text-6xl lg:text-7xl uppercase">
             Terms And <br /> Conditions
@@ -18,7 +18,7 @@ const PrivacyPolicyPage = () => {
           <div className="flex justify-between divide-x divide-transparent lg:divide-primary gap-10 -mt-10">
             <div className="h-full w-[25%] pt-10 hidden lg:flex">
               <Link href="/privacypolicy">
-                <button className="px-12 uppercase py-3 bg-primary  text-xl font-light rounded-[35px] relative text-white hover:border-primary transition-all  transform hover:scale-105">
+                <button className="px-12 uppercase py-3 bg-primary  text-lg font-light rounded-[35px] relative text-white hover:border-primary transition-all  transform hover:scale-105">
                   PRivacy Policy
                   <img
                     src="/assets/icons/nav/arrow-lefttop.svg"
@@ -30,7 +30,7 @@ const PrivacyPolicyPage = () => {
             </div>
 
             <div className="h-full w-full lg:w-[75%] ">
-              <div className="px-0 lg:px-10 mt-10">
+              <div className="px-0 lg:px-12 mt-10">
                 Welcome to{" "}
                 <span className="font-medium text-primary">leashpay.com</span>.
                 By using{" "}
@@ -285,7 +285,7 @@ const PrivacyPolicyPage = () => {
 
                 <div className="w-full flex flex-col justify-center items-center mt-10 lg:hidden">
                   <Link href="/privacypolicy">
-                    <button className="px-12 uppercase py-3 bg-primary  text-xl font-light rounded-[35px] relative text-white hover:border-primary transition-all  transform hover:scale-105">
+                    <button className="px-12 uppercase py-3 bg-primary  text-lg font-light rounded-[35px] relative text-white hover:border-primary transition-all  transform hover:scale-105">
                       Privacy Policy
                       <img
                         src="/assets/icons/nav/arrow-lefttop.svg"
@@ -306,4 +306,4 @@ const PrivacyPolicyPage = () => {
   );
 };
 
-export default PrivacyPolicyPage;
+export default TermsConditionsPage;
