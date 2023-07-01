@@ -51,3 +51,15 @@ body {
 .paragraphText1 {
   @apply text-base sm:text-lg
 }
+
+
+
+
+/* terms and privacy */
+.sectionHeader {
+  @apply text-primary font-bold text-3xl
+}
+
+.highlightText{
+  @apply text-primary font-medium
+}
