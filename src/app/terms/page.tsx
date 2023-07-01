@@ -1,4 +1,5 @@
 import MainLayout from "@/components/layouts/MainLayout";
+import Link from "next/link";
 import React from "react";
 
 const HorizontalRule = () => {
@@ -97,12 +98,12 @@ const TermsConditionPage = () => {
           <div className="flex flex-col gap-8">
             <h1 className="sectionHeader">Paying for Your Order</h1>
             <div>
-              leashpay.com accepts multiple payment options. Payment options
-              include but are not limited to Visa®, MasterCard®, MTN mobile
-              money®, Airtel money® and Tigo cash®. Since all payments are
-              electronic and most orders are digitally delivered, credit and
-              debit cards are generally charged at the time you make a payment
-              or initiate an order.
+              <span className="highlightText">leashpay.com</span> accepts
+              multiple payment options. Payment options include but are not
+              limited to Visa®, MasterCard®, MTN mobile money®, Airtel money®
+              and Tigo cash®. Since all payments are electronic and most orders
+              are digitally delivered, credit and debit cards are generally
+              charged at the time you make a payment or initiate an order.
             </div>
           </div>
           <HorizontalRule />
@@ -116,32 +117,38 @@ const TermsConditionPage = () => {
               your method of payment. We reserve the right to reject any payment
               you initiate and / or order you place with us, and / or to limit
               quantities on any order, without giving any reason. If we reject
-              your payment or order, we will attempt to notify you on
-              leashpay.com or using the e-mail address or phone number in your
-              account. Your credit or debit card will normally not be charged if
-              we reject an initiated payment or order and will only be charged
-              by the appropriate amount if we limit an order.
+              your payment or order, we will attempt to notify you on{" "}
+              <span className="highlightText">leashpay.com</span> or using the
+              e-mail address or phone number in your account. Your credit or
+              debit card will normally not be charged if we reject an initiated
+              payment or order and will only be charged by the appropriate
+              amount if we limit an order.
             </div>
           </div>
           <HorizontalRule />
           <div className="flex flex-col gap-8">
             <h1 className="sectionHeader">Refund Policy</h1>
             <div>
-              All sales made through leashpay.com are subject to leashpay.com’s
-              refund policy. For a complete explanation of the refund policy,
-              please see Refunds section.
+              All sales made through{" "}
+              <span className="highlightText">leashpay.com</span> are subject to{" "}
+              <span className="highlightText">leashpay.com</span>’s refund
+              policy. For a complete explanation of the refund policy, please
+              see Refunds section.
             </div>
           </div>
           <HorizontalRule />
           <div className="flex flex-col gap-8">
             <h1 className="sectionHeader">Termination of Use</h1>
             <div>
-              leashpay.com may, in its sole discretion, terminate your account
-              or your use of leashpay.com at any time. You are personally liable
-              for any payments you initiate orders that you place and charges
-              that you incur prior to termination. leashpay.com reserves the
-              right to change, suspend or discontinue all or any aspects of
-              leashpay.com at any time without prior notice.
+              <span className="highlightText">leashpay.com</span> may, in its
+              sole discretion, terminate your account or your use of{" "}
+              <span className="highlightText">leashpay.com</span> at any time.
+              You are personally liable for any payments you initiate orders
+              that you place and charges that you incur prior to termination.{" "}
+              <span className="highlightText">leashpay.com</span> reserves the
+              right to change, suspend or discontinue all or any aspects of{" "}
+              <span className="highlightText">leashpay.com</span> at any time
+              without prior notice.
             </div>
           </div>
           <HorizontalRule />
@@ -150,21 +157,23 @@ const TermsConditionPage = () => {
             <div className="flex flex-col gap-5">
               <h2 className="text-[#F79400] font-bold text-xl">Postpaid</h2>
               <div>
-                leashpay.com does not normally provide refunds for transactions
-                performed through the site. However, under exceptional cases we
-                will work with the biller to review your particular circumstance
-                to address any issues you raise.
+                <span className="highlightText">leashpay.com</span> does not
+                normally provide refunds for transactions performed through the
+                site. However, under exceptional cases we will work with the
+                biller to review your particular circumstance to address any
+                issues you raise.
               </div>
             </div>
 
             <div className="flex flex-col gap-6">
               <h2 className="text-[#F79400] font-bold text-xl">Postpaid</h2>
               <div>
-                leashpay.com keeps detailed logs of all transactions that take
-                place. leashpay.com will conduct a detailed investigation of all
-                refund requests for prepaid services. In cases where it is
-                possible to “return” the services already paid we will endeavor
-                to process a return.
+                <span className="highlightText">leashpay.com</span> keeps
+                detailed logs of all transactions that take place.{" "}
+                <span className="highlightText">leashpay.com</span> will conduct
+                a detailed investigation of all refund requests for prepaid
+                services. In cases where it is possible to “return” the services
+                already paid we will endeavor to process a return.
               </div>
             </div>
 
@@ -209,7 +218,8 @@ const TermsConditionPage = () => {
               </h1>
               <div>
                 To undo a chargeback, you must contact your bank to issue a
-                chargeback reversal. Please contact leashpay.com to inform us
+                chargeback reversal. Please contact{" "}
+                <span className="highlightText">leashpay.com</span> to inform us
                 when the reversal is initiated so we can make a note on your
                 account.
               </div>
@@ -228,6 +238,21 @@ const TermsConditionPage = () => {
                 </span>
               </div>
             </div>
+
+            <div className="w-full flex flex-col justify-center items-center mt-10">
+              <Link href="/terms">
+                <button className="px-12 uppercase py-3 bg-primary  text-xl font-light rounded-[35px] relative text-white hover:border-primary transition-all  transform hover:scale-105">
+                  Privacy Policy
+                  <img
+                    src="/assets/icons/nav/arrow-lefttop.svg"
+                    alt="nav right"
+                    className="absolute  top-1.5 right-4"
+                  />
+                </button>
+              </Link>
+            </div>
+
+            <div className="my-10"></div>
           </div>
         </div>
       </div>
