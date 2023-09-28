@@ -138,33 +138,11 @@ const Index = () => {
 
                   <div className=" w-full">
                     <h1 className="text-secondary font-medium text-base">
-                      Accept payments
+                      Do more
                     </h1>
                     <div className="flex flex-col gap-3 mt-6">
-                      <CustomLinkButton
-                        text="Online Payment"
-                        href="/onlinepayment"
-                      />
-                      <CustomLinkButton
-                        text="In-person Payment"
-                        href="/inpersonpayment"
-                      />
-                    </div>
-                  </div>
-
-                  <div className=" w-full">
-                    <h1 className="text-secondary font-medium text-base">
-                      Accept payments
-                    </h1>
-                    <div className="flex flex-col gap-3 mt-6">
-                      <CustomLinkButton
-                        text="Online Payment"
-                        href="/onlinepayment"
-                      />
-                      <CustomLinkButton
-                        text="In-person Payment"
-                        href="/inpersonpayment"
-                      />
+                      <CustomLinkButton text="Billing" href="/" />
+                      <CustomLinkButton text="Invoicing" href="/" />
                     </div>
                   </div>
                 </div>

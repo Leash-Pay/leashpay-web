@@ -2,15 +2,24 @@ import { PrimaryButton } from "@/components/customUI";
 import Image from "next/image";
 import React from "react";
 
-const SingleListItem = ({ text }: { text: string }) => {
+const SingleListItem = ({
+  text,
+  iconUrl,
+  iconSize,
+}: {
+  text: string;
+  iconUrl: string;
+  iconSize: { height: number; widht: number };
+}) => {
   return (
-    <div className="flex items-center gap-3">
-      <div>
+    <div className="flex items-center gap-3 ">
+      <div className=" w-10 flex items-center justify-center">
         <Image
-          src="/assets/icons/cube-sphere.svg"
-          alt="cube sphere icon"
-          width={50}
-          height={50}
+          src={`/assets/icons/${iconUrl}`}
+          alt={iconUrl}
+          width={iconSize.widht}
+          height={iconSize.height}
+          className=""
         />
       </div>
       <div className="text-white font-medium text-xl">{text}</div>
@@ -33,11 +42,39 @@ const EasilyGetPaidSection = () => {
             <PrimaryButton text="Get Started" type={2} href="/signin" />
           </div>
 
-          <div className="flex flex-col gap-2.5 ">
-            <SingleListItem text="Ecommerce" />
-            <SingleListItem text="In-person retailers" />
-            <SingleListItem text="Marketplaces" />
-            <SingleListItem text="Subscriptions Business" />
+          <div className="flex flex-col gap-3.5 ">
+            <SingleListItem
+              text="Ecommerce"
+              iconUrl="ecommerce.svg"
+              iconSize={{
+                height: 29,
+                widht: 29,
+              }}
+            />
+            <SingleListItem
+              text="In-person retailers"
+              iconUrl="inperson-retail.svg"
+              iconSize={{
+                height: 10,
+                widht: 20,
+              }}
+            />
+            <SingleListItem
+              text="Marketplaces"
+              iconUrl="marketplace.svg"
+              iconSize={{
+                height: 30,
+                widht: 32,
+              }}
+            />
+            <SingleListItem
+              text="Subscriptions Business"
+              iconUrl="subscriptions.svg"
+              iconSize={{
+                height: 30,
+                widht: 33,
+              }}
+            />
           </div>
         </div>
         <div className="w-full  hidden sm:flex flex-col">
