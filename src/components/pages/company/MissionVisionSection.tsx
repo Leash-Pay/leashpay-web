@@ -18,7 +18,7 @@ const SingleComponent = ({ title, description }: SingleComponentProps) => {
 const MissionVisionSection = () => {
   return (
     <section className="bg-white py-40">
-      <section className="container mx-auto sm:px-5 max-w-7xl h-fit">
+      <section className="container mx-auto sm:px-5 max-w-7xl h-fit ">
         <div className="flex flex-col md:flex-row justify-between   gap-10 sm:gap-20  h-full">
           <div className="w-full  md:order-last  flex flex-col  items-end">
             <Image
@@ -29,7 +29,7 @@ const MissionVisionSection = () => {
               className=" "
             />
           </div>
-          <div className="w-full  md:w-3/5 overflow-scroll flex md:flex-col  overflow-x-scroll gap-16 justify-between ml-10 sm:ml-0">
+          <div className="w-full  md:w-3/5  flex md:flex-col gap-16 justify-between ml-10 sm:ml-0 overflow-auto">
             <SingleComponent
               title="Our goal"
               description="Our goal and focus are premised on providing and delivering
@@ -41,7 +41,7 @@ const MissionVisionSection = () => {
               description="To be a global Tech Giant; Impacting with innovation."
             />
             <SingleComponent
-              title="Misison"
+              title="Mission"
               description="To enable secure and convenient access to payments for every business and individual"
             />
           </div>

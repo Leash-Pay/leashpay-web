@@ -19,11 +19,11 @@ const CardIssuingSection = () => {
 
         <div className="w-full mt-10 sm:mt-0 ">
           <Image
-            src="/assets/img/card.png"
+            src="/assets/img/debit-card.png"
             alt="card image"
-            width={302}
+            width={350}
             height={184}
-            className=" w-full "
+            className=" w-full  "
           />
 
           <p className="text-secondary font-bold mt-10 sm:hidden">

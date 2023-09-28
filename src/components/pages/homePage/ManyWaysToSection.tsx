@@ -4,12 +4,15 @@ import React from "react";
 const SingleListItem = ({ logo }: { logo: string }) => {
   return (
     <div className="border border-primary rounded-[20px] h-[78px] w-[78px] md:h-[110px] md:w-[110px] flex justify-center items-center p-3">
-      <Image
-        src={`/assets/icons/networks/${logo}.svg`}
-        alt={logo}
-        width={107}
-        height={28}
-      />
+      {logo && (
+        <Image
+          src={`/assets/icons/networks/${logo}`}
+          alt={logo}
+          width={107}
+          height={28}
+          className="p-1.5"
+        />
+      )}
     </div>
   );
 };
@@ -29,19 +32,19 @@ const ManyWaysToSection = () => {
 
         <div className="flex flex-col gap-4 sm:gap-6 w-full  sm:p-10  ">
           <div className=" w-full flex flex-row sm:justify-evenly justify-between gap-4 ">
-            <SingleListItem logo="vodafone" />
-            <SingleListItem logo="mtn" />
-            <SingleListItem logo="airteltigo" />
+            <SingleListItem logo="vodafone.svg" />
+            <SingleListItem logo="mtn.svg" />
+            <SingleListItem logo="airteltigo.svg" />
           </div>
           <div className=" w-full flex flex-row sm:justify-evenly justify-between gap-4 ">
-            <SingleListItem logo="vodafone" />
-            <SingleListItem logo="mtn" />
-            <SingleListItem logo="airteltigo" />
+            <SingleListItem logo="visa.png" />
+            <SingleListItem logo="mastercard.svg" />
+            <SingleListItem logo="amexpress.jpg" />
           </div>
           <div className=" w-full flex flex-row sm:justify-evenly justify-between gap-4 ">
-            <SingleListItem logo="vodafone" />
-            <SingleListItem logo="mtn" />
-            <SingleListItem logo="airteltigo" />
+            <SingleListItem logo="" />
+            <SingleListItem logo="" />
+            <SingleListItem logo="" />
           </div>
         </div>
       </div>
