@@ -1,0 +1,19 @@
+---
+version: '3.9'
+
+services:
+  base-image:
+    build:
+      args:
+        user: ${UID:-1000}
+        uid: ${UID:-1000}
+      context: ./
+      dockerfile: BaseDockerfile
+    user: "${UID:-1000}:${GID:-1000}"
+    image: payapp-base-image
+    networks:
+      - payapp
+
+networks:
+  payapp:
+    name: payapp

@@ -1,35 +1,108 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# Laravel specific
+/api/vendor/
+/api/node_modules/
+/api/.env
+/api/.env.backup
+/api/.env.example.php
+/api/.env.old
+/api/storage/*.key
+/api/storage/framework/cache/
+/api/storage/framework/sessions/
+/api/storage/framework/testing/
+/api/storage/framework/views/
+/api/bootstrap/cache/
+/api/public/hot
+/api/public/storage
+/api/public/mix-manifest.json
+/api/database/*.sqlite
+/api/database/*.sqlite-journal
+/api/.phpunit.result.cache
+/api/Homestead.json
+/api/Homestead.yaml
+/api/nbproject/private/
+/api/.phpstorm.meta.php
+/api/_ide_helper.php
+/api/_ide_helper_models.php
+/api/.php_cs.cache
+/api/.phpunit.result.cache
+/api/phpunit.xml
+/api/.vagrant/
+/api/phpunit-*.xml
+/api/.idea/
 
-# dependencies
-/node_modules
-/.pnp
-.pnp.js
+# Next.js / Node specific
+/site/.next/
+/site/node_modules/
+/site/.env.local
+/site/.env.*.local
+/site/.env.*.test
+/site/.DS_Store
+/site/npm-debug.log*
+/site/yarn-debug.log*
+/site/yarn-error.log*
+/site/pnpm-debug.log*
+/site/.vercel
+/site/out/
 
-# testing
-/coverage
+# Common
+*.log
+*.swo
+*.swp
+*.bak
+*.cache
+*.DS_Store
+*.idea
+*.vscode/
+*.netlify/
+*.sass-cache/
+*.tmp
+*.tmp.*
+*.sw[op]
+*.lock
+*.mine
+*.test
+*.conflict
+*.orig
+*.dist
+*.retry
+*.rej
+*.swo
+*.swp
+*.swn
+*.bak
+*.merge
+*.off
+*.old
+*.bak
+*.BAK
+*.orig
+*.rej
+*.swp
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.save
+*.swo
+*.tar
+*.tar.*
+*.tgz
+*.tmuxp
+*.vim
+*.swp
+*.swp
+*.swo
+*.log
+*.sql
+*.sqlite
 
-# next.js
-/.next/
-/out/
-
-# production
-/build
-
-# misc
+# OS generated
 .DS_Store
-*.pem
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
 
-# debug
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# local env files
-.env*.local
-
-# vercel
-.vercel
-
-# typescript
-*.tsbuildinfo
-next-env.d.ts

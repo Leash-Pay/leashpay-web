@@ -1,0 +1,132 @@
+FROM php:8.2-fpm
+
+# Arguments defined in docker-compose.yml
+ARG user
+ARG uid
+
+ARG WWWUSER=1000
+ARG WWWGROUP=1000
+ARG TZ=UTC
+
+LABEL maintainer="Richard Anabeto Opoku <ropoku@leashpay.com>"
+
+# Install system dependencies
+RUN apt-get update && apt-get install -y \
+    git \
+    vim \
+    curl \
+    libpng-dev \
+    libonig-dev \
+    libxml2-dev \
+    zip \
+    zlib1g-dev \
+    libzip-dev \
+    libpq-dev \
+    libcurl4-openssl-dev \
+    pkg-config \
+    libssl-dev \
+    unzip \
+    python-is-python3 \
+    && ( \
+        cd /tmp \
+        && mkdir librdkafka \
+        && cd librdkafka \
+        && git clone https://github.com/edenhill/librdkafka.git . \
+        && ./configure \
+        && make \
+        && make install \
+    )
+
+# Install Nginx and Supervisor
+RUN apt-get update && apt-get install -y nginx supervisor
+
+# Remove default Nginx configuration file
+RUN rm /etc/nginx/sites-enabled/default
+
+# Copy Nginx configuration file
+COPY nginx/nginx.conf /etc/nginx/sites-enabled/default
+
+# Copy Supervisor configuration file
+COPY nginx/supervisord.conf /etc/supervisor/conf.d/
+
+COPY nginx/main.conf /etc/nginx/nginx.conf
+
+# Copy SSL Certs
+COPY certs/leashpay.test.crt /etc/ssl/certs/leashpay.test.crt
+COPY certs/leashpay.test.key /etc/ssl/private/leashpay.test.key
+COPY certs/leashpay.test.key /etc/ssl/certs/leashpay.test.key
+
+RUN chown -R www-data:www-data /etc/ssl/private/leashpay.test.key
+
+# Clear cache
+RUN apt-get clean && rm -rf /var/lib/apt/lists/*
+
+# Kafka Install
+RUN docker-php-ext-install -j$(nproc) zip \
+    && pecl install rdkafka \
+    && docker-php-ext-enable rdkafka \
+    && pecl install mongodb \
+    && docker-php-ext-enable mongodb \
+    && pecl install redis && docker-php-ext-enable redis
+
+# Install PHP extensions
+RUN docker-php-ext-install pdo pdo_mysql mbstring exif pcntl bcmath gd intl
+
+RUN docker-php-ext-configure pgsql -with-pgsql=/usr/local/pgsql \
+    && docker-php-ext-install pgsql pdo_pgsql
+# Get latest Composer
+COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
+
+# For processes such as pgrep and ps
+RUN apt-get update && apt-get install -y procps gosu
+
+RUN apt-get clean && rm -rf /var/lib/apt/lists/* && apt-get update && apt-get install -y libcap2-bin && rm -rf /var/lib/apt/lists/*
+
+RUN pecl install xdebug
+
+RUN docker-php-ext-enable xdebug
+
+# allow nginx and php-fpm to bind to privileged ports
+RUN setcap cap_net_bind_service=+ep /usr/sbin/nginx 
+RUN setcap cap_net_bind_service=+ep /usr/local/sbin/php-fpm
+
+# Create system user to run Composer and Artisan Commands
+RUN useradd -G www-data,root -u $uid -d /home/$user $user
+RUN mkdir -p /home/$user/.composer && \
+    chown -R $user:$user /home/$user
+
+
+ENV APP_ROOT /var/www/html
+COPY base_entrypoint.sh /usr/local/bin/entrypoint.sh
+RUN chmod +x /usr/local/bin/entrypoint.sh
+ENTRYPOINT ["entrypoint.sh"]
+
+# Set working directory
+WORKDIR  /var/www/html
+
+RUN mkdir -p \
+  storage/framework/{sessions,views,cache} \
+  storage/logs \
+  bootstrap/cache \
+  && chown -R $user:$user \
+  storage \
+  bootstrap/cache \
+  && chmod -R ug+rwx storage bootstrap/cache
+
+
+RUN mkdir -p /var/lib/nginx && chown -R $user:$user /var/lib/nginx/
+RUN mkdir -p /var/log/nginx && chown -R $user:$user /var/log/nginx 
+RUN chmod -R 775 /var/log/nginx && chown -R $user:$user /var/log/supervisor && chmod -R 775 /var/log/supervisor
+
+RUN chmod g+wx /var/log/ && \
+    chmod g+wx /var/www/html && \
+    chmod g+wx /var/lib/nginx && \
+    chmod g+wx /var/log/nginx && \
+    chmod g+wx /var/log/supervisor && \
+    chmod g+wx /run/
+
+ENV NON_ROOT_USER=$user
+
+EXPOSE 80 443
+
+CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/conf.d/supervisord.conf"]
