@@ -19,6 +19,8 @@ use App\Http\Controllers\ConfirmJoiningWaitListController;
 Route::group(['prefix' => 'v1', 'middleware' => ['api']], function () {
     Route::match(['GET', 'HEAD', 'POST'], '/', StatusController::class);
 
-    Route::post('/join', JoinWaitListController::class)->name('join');
-    Route::post('/confirm/{token}', ConfirmJoiningWaitListController::class)->name('join.confirmation');
+    Route::group(['throttle:join'], function () {
+        Route::post('/join', JoinWaitListController::class)->name('join');
+        Route::post('/confirm/{token}', ConfirmJoiningWaitListController::class)->name('join.confirmation');
+    });
 });
