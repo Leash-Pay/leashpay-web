@@ -11,7 +11,6 @@ services:
       context: ./api
       dockerfile: Dockerfile
     container_name: payapp-site-api
-    user: "${UID:-1000}:${GID:-1000}"
     restart: unless-stopped
     volumes:
       - ./api:/var/www/html
@@ -82,10 +81,11 @@ services:
 
   webserver:
     image: nginx:alpine
-    platform: linux/amd64
     container_name: payapp-site-server
     restart: unless-stopped
     tty: true
+    depends_on:
+      - web
     ports:
       - "8098:80"
       - "8099:443"

@@ -1,7 +1,9 @@
 <?php
 
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\StatusController;
+use App\Http\Controllers\JoinWaitListController;
+use App\Http\Controllers\ConfirmJoiningWaitListController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +16,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+Route::group(['prefix' => 'v1', 'middleware' => ['api']], function () {
+    Route::match(['GET', 'HEAD', 'POST'], '/', StatusController::class);
+
+    Route::group(['throttle:join'], function () {
+        Route::post('/join', JoinWaitListController::class)->name('join');
+        Route::post('/confirm/{token}', ConfirmJoiningWaitListController::class)->name('join.confirmation');
+    });
 });
