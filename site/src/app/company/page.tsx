@@ -14,7 +14,7 @@ const Page = () => {
         <Navbar />
         <div className=" w-full  h-full container mx-auto px-6 max-w-7xl flex flex-col md:flex-row justify-between items-center gap-16 ">
           <div className="w-full  "></div>
-          <div className="w-full flex flex-col mt-16 gap-8  order-first justify-center ">
+          <div className="w-full flex flex-col mt-36 md:mt-16 gap-8  order-first justify-center ">
             <PageTransition>
               <div className="flex flex-col gap-8 mt-8 sm:mt-0">
                 <h1 className="text-secondary headerText1 md:leading-[4.5rem]">

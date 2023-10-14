@@ -60,7 +60,7 @@ const Company = () => {
       <li>Accra, Ghana</li>
 
       <li className="my-6">ask@leashpay.com</li>
-      <li className="">+233 243513027</li>
+      <li className="">+233(0)30-295-5345</li>
     </ul>
   );
 };
