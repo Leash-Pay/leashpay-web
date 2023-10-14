@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import { PrimaryButton } from "../customUI";
 import Link from "next/link";
 
@@ -34,6 +34,9 @@ const Index = () => {
   const [openMobileMenu, setOpenMobileMenu] = useState(false);
   const [openSolutionsDropdown, setOpenSolutionsDropdown] = useState(false);
 
+  const [showNavbar, setShowNavbar] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
   const mobileMenuRef = useRef<HTMLDivElement>(null);
   const solutionsDropdownRef = useRef<HTMLDivElement>(null);
 
@@ -53,8 +56,38 @@ const Index = () => {
       document.removeEventListener("mousedown", clickHandler);
     };
   });
+
+  const controlNavbar = useCallback(() => {
+    if (typeof window !== "undefined") {
+      if (window.scrollY > lastScrollY) {
+        // if scroll down hide the navbar
+        setShowNavbar(false);
+      } else {
+        setShowNavbar(true);
+      }
+      // remember current page location to use in the next move
+      setLastScrollY(window.scrollY);
+    }
+  }, [lastScrollY]);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", controlNavbar);
+
+      // cleanup function
+      return () => {
+        window.removeEventListener("scroll", controlNavbar);
+      };
+    }
+  }, [controlNavbar]);
+
+  console.log(lastScrollY, showNavbar, "lastscroly");
   return (
-    <nav className=" w-full  z-50 fixed top-0  ">
+    <nav
+      className={` w-full  z-50 fixed top-0  ${
+        !showNavbar && "hidden"
+      } delay-300 transition-all ease-in-out duration-[50000ms]  `}
+    >
       <div className="container mx-auto px-4 md:px-0  max-w-7xl  ">
         {/* desktop */}
         <div className="hidden relative lg:flex w-full justify-between bg-[#FFFFFF]  px-0  md:px-4 py-3 rounded-[25px] shadow-xl  mt-6 ">
