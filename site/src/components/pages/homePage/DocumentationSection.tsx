@@ -6,7 +6,7 @@ const DocumentationSection = () => {
   return (
     <section className=" customContainer">
       <div className="bg-transparent flex flex-col lg:flex-row customHomepageSection">
-        <div className="flex flex-col gap-10 w-full  sm:p-10 md:p-6 ">
+        <div className="flex flex-col gap-10 w-full px-6  sm:p-10 md:p-6 ">
           <h1 className="text-secondary headerText1 md:leading-[4.5rem]">
             Explore our guides and documentation.
           </h1>

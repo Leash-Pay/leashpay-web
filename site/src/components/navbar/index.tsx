@@ -116,7 +116,9 @@ const Index = () => {
             <button className="px-5">
               <Link href="/company">Company</Link>
             </button>
-            <button className="px-5">Pricing</button>
+            <button className="px-5">
+              <Link href="/pricing">Pricing</Link>
+            </button>
 
             <PrimaryButton text="Get Started" href="/signin" />
           </div>

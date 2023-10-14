@@ -23,7 +23,7 @@ const NavItems = () => {
         <Link href="/inpersonpayment">Solutions</Link>
       </li>
       <li className="hover:underline decoration-secondary underline-offset-4">
-        <Link href="/">Pricing</Link>
+        <Link href="/pricing">Pricing</Link>
       </li>
       <li className="hover:underline decoration-secondary underline-offset-4">
         <Link href="/privacypolicy">Privacy Policy</Link>
