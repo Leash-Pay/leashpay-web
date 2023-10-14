@@ -81,7 +81,7 @@ const Index = () => {
     }
   }, [controlNavbar]);
 
-  console.log(lastScrollY, showNavbar, "lastscroly");
+  // console.log(lastScrollY, showNavbar, "lastscroly");
   return (
     <nav
       className={` w-full  z-50 fixed top-0  ${
