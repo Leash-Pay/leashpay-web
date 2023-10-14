@@ -1,4 +1,4 @@
-version: '3.8'
+version: "3.8"
 
 services:
   api:
@@ -60,7 +60,6 @@ services:
         WWWUSER: ${UID:-1000}
         WWWGROUP: ${GID:-1000}
       context: ./site
-      target: runner
       dockerfile: Dockerfile
     container_name: payapp-site-web
     user: "${UID:-1000}:${GID:-1000}"

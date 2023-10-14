@@ -44,6 +44,8 @@
 /site/.vercel
 /site/out/
 
+
+
 # Common
 *.log
 *.swo
