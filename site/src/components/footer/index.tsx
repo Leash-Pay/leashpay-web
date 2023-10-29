@@ -123,7 +123,7 @@ const index = () => {
             </h1>
 
             <div>
-              <PrimaryButton text="Get Started" type={2} href="/signin" />
+              <PrimaryButton text="Get Started" type={2} href="/waitlist" />
             </div>
           </div>
           <NavItems />

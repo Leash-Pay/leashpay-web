@@ -106,7 +106,7 @@ const page = () => {
             <div className="flex justify-center mt-2">
               <p className="text-primary">
                 Have an account?{" "}
-                <Link href="/signin" className="text-secondary">
+                <Link href="/waitlist" className="text-secondary">
                   Sign in
                 </Link>
               </p>
