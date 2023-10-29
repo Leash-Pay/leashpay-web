@@ -5,7 +5,7 @@ import { PrimaryButton } from "@/components/customUI";
 const TryLeashPay = () => {
   return (
     <div className="container mx-auto max-w-7xl  flex flex-col lg:flex-row  px-5 h-[567px] sm:h-[420px]">
-      <div className="w-full h-full  rounded-b-[30px]  lg:rounded-l-[30px] lg:rounded-br-none bg-white p-6 lg:p-10 lg:px-12 flex flex-col gap-10 ">
+      <div className="w-full h-full  rounded-b-[30px]  lg:rounded-l-[30px] lg:rounded-br-none bg-white p-6 lg:p-10 lg:px-12 lg:pl-20 flex flex-col gap-10 ">
         <div className="">
           <h1 className="text-secondary text-3xl md:text-4xl mb-4">
             Try LeashPay Now

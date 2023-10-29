@@ -120,7 +120,7 @@ const Index = () => {
               <Link href="/pricing">Pricing</Link>
             </button>
 
-            <PrimaryButton text="Get Started" href="/signin" />
+            <PrimaryButton text="Get Started" href="/waitlist" />
           </div>
 
           <div className="lg:hidden w-full  flex items-center justify-end ">
@@ -263,7 +263,7 @@ const Index = () => {
                   </div>
                 </div>
                 <div className="flex justify-center">
-                  <PrimaryButton text="Get Started" href="/signin" />
+                  <PrimaryButton text="Get Started" href="/waitlist" />
                 </div>
               </div>
             )}

@@ -27,6 +27,10 @@ const PrimaryButton = ({
        transition-all  transform hover:scale-x-105
     
     `}
+      onClick={() => {
+        console.log("click me");
+        onClickHandler;
+      }}
     >
       {href ? (
         <div className="group-hover:scale-75 transition-all  transform ease-in-out text-xs">
