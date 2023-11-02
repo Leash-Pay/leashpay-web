@@ -105,12 +105,18 @@ const Index = () => {
 
           <div className="hidden lg:flex justify-between  w-full text-primary font-medium  ml-10 text-xl items-center  border-red-100">
             <button
-              className=" relative px-5"
+              className=" relative px-5 w-full"
               onMouseEnter={() => setOpenSolutionsDropdown(true)}
               onMouseLeave={() => setOpenSolutionsDropdown(false)}
             >
               <div className="absolute  border-red-500  h-[240%]  w-full left-0"></div>
-              <h1 className="hover:font-bold border">Solutions</h1>
+              <h1
+                className={` ${
+                  openSolutionsDropdown && "font-semibold"
+                }  w-auto  `}
+              >
+                Solutions
+              </h1>
             </button>
             <button className="navbar-buttons">Developers</button>
             <button className="navbar-buttons">

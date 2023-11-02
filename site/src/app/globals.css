@@ -50,7 +50,7 @@ body {
 
 /* navabr */
 .navbar-buttons {
-  @apply px-5 hover:font-semibold w-full border;
+  @apply px-5 hover:font-semibold w-full;
 }
 
 /* terms and privacy */
