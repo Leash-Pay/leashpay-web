@@ -103,20 +103,20 @@ const Index = () => {
             </Link>
           </div>
 
-          <div className="hidden lg:flex justify-between  w-full text-primary font-medium  ml-10 text-xl items-center">
+          <div className="hidden lg:flex justify-between  w-full text-primary font-medium  ml-10 text-xl items-center  border-red-100">
             <button
               className=" relative px-5"
               onMouseEnter={() => setOpenSolutionsDropdown(true)}
               onMouseLeave={() => setOpenSolutionsDropdown(false)}
             >
               <div className="absolute  border-red-500  h-[240%]  w-full left-0"></div>
-              Solutions
+              <h1 className="hover:font-bold border">Solutions</h1>
             </button>
-            <button className="px-5">Developers</button>
-            <button className="px-5">
+            <button className="navbar-buttons">Developers</button>
+            <button className="navbar-buttons">
               <Link href="/company">Company</Link>
             </button>
-            <button className="px-5">
+            <button className="navbar-buttons">
               <Link href="/pricing">Pricing</Link>
             </button>
 

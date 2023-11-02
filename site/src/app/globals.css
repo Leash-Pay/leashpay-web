@@ -8,9 +8,6 @@
   --background-end-rgb: 255, 255, 255;
 } */
 
-
-
-
 html {
   overflow-y: scroll;
   height: 100%;
@@ -19,7 +16,7 @@ html {
 }
 
 body {
-  background-color: #F7F7F7;
+  background-color: #f7f7f7;
   overflow-y: visible;
   position: relative;
   height: unset;
@@ -31,51 +28,52 @@ body {
   margin: 0;
 }
 
-
 .homepageCardSize {
-  @apply h-[567px] sm:h-[500px] w-full
+  @apply h-[567px] sm:h-[500px] w-full;
 }
 
 .customHomepageSection {
-  @apply rounded-[50px] h-full w-full md:pl-16 p-5 py-10 gap-10  items-center
+  @apply rounded-[50px] h-full w-full md:pl-16 p-5 py-10 gap-10  items-center;
 }
 
 .customContainer {
-  @apply container mx-auto px-5  max-w-7xl
+  @apply container mx-auto px-5  max-w-7xl;
 }
 
 .headerText1 {
-  @apply text-4xl md:text-5xl font-bold
+  @apply text-4xl md:text-5xl font-bold;
 }
 
 .paragraphText1 {
-  @apply text-base sm:text-lg
+  @apply text-base sm:text-lg;
 }
 
-
-
+/* navabr */
+.navbar-buttons {
+  @apply px-5 hover:font-semibold w-full border;
+}
 
 /* terms and privacy */
 .sectionHeader {
-  @apply text-primary font-bold text-3xl
+  @apply text-primary font-bold text-3xl;
 }
 
 .sectionDivWrapper {
-  @apply flex flex-col gap-8 lg:pl-12
+  @apply flex flex-col gap-8 lg:pl-12;
 }
 
 .sectionDivWrapper2 {
-  @apply flex flex-col lg:flex-row justify-between w-full h-full lg:divide-x lg:divide-primary lg:border-b lg:border-primary gap-6 lg:-mt-10
+  @apply flex flex-col lg:flex-row justify-between w-full h-full lg:divide-x lg:divide-primary lg:border-b lg:border-primary gap-6 lg:-mt-10;
 }
 
 .leftSection2Div {
-  @apply w-full lg:w-[30%] lg:py-12 lg:pl-12
+  @apply w-full lg:w-[30%] lg:py-12 lg:pl-12;
 }
 
 .rightSection2Div {
-  @apply w-full lg:w-[70%] h-full lg:py-12 lg:pl-6 
+  @apply w-full lg:w-[70%] h-full lg:py-12 lg:pl-6;
 }
 
-.highlightText{
-  @apply text-primary font-medium
+.highlightText {
+  @apply text-primary font-medium;
 }

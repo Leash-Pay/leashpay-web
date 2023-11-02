@@ -58,7 +58,7 @@ const CostCalculator = () => {
           {/* desktop view */}
           <div className="hidden lg:block">
             <div className="flex justify-between font-medium text-lg uppercase">
-              <p>We'll settle you</p>
+              <p>We&lsquo;ll settle you</p>
               <p>Leashpay fees ({LPcharges * 100}%)</p>
             </div>
             <hr />
@@ -72,7 +72,7 @@ const CostCalculator = () => {
           <div className="lg:hidden flex gap-3 flex-col mt-4">
             <div className="flex flex-col uppercase">
               <p className="font-medium text-lg tracking-wider">
-                We'll settle you
+                We&lsquo;ll settle you
               </p>
               <h1 className="font-bold text-2xl">
                 GHS {formatToMoney(settlementFee)}
