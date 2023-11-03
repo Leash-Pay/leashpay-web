@@ -1,12 +1,17 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { PrimaryButton } from "@/components/customUI";
+import BaseModal from "@/components/modal";
 
 const Waitlist = () => {
   const [email, setEmail] = useState("");
+  const [name, setName] = useState("mmm");
   const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [isButtonDisabled, setIsButtonDisabled] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [isOpenModal, setIsOpenModal] = useState(false);
+  const [modalMessage, setModalMessage] = useState("");
 
   const onFormSubmitHandler = async (e: React.FormEvent) => {
     console.log("invoked me");
@@ -25,7 +30,7 @@ const Waitlist = () => {
     try {
       const formData = new FormData();
       formData.set("email", email);
-      formData.set("name", email);
+      formData.set("name", name);
       const response = await fetch("https://localhost:8096/api/v1/join", {
         method: "POST",
         body: formData,
@@ -33,6 +38,9 @@ const Waitlist = () => {
       const data = await response.json();
       if (data.status === "success") {
         console.log(data.message);
+        // setError(data.message);
+        setModalMessage(data.message);
+        setIsOpenModal(true);
       }
     } catch (error) {
       console.log(error, "error");
@@ -40,7 +48,14 @@ const Waitlist = () => {
       setIsLoading(false);
     }
   };
-  console.log(email);
+
+  useEffect(() => {
+    if (email.length > 2 && name.length > 2) {
+      setIsButtonDisabled(false);
+    } else {
+      setIsButtonDisabled(true);
+    }
+  }, [name, email]);
 
   return (
     <div className="w-full h-full container mx-auto px-5 md:px-10  max-w-7xl flex flex-col md:flex-row   gap-16  ">
@@ -57,12 +72,27 @@ const Waitlist = () => {
         <div>
           {/* mobile */}
           <div className="flex flex-col items-center gap-3 md:hidden">
-            <div className="w-full flex flex-col items-center gap-0.5">
+            <div className="w-full flex flex-col items-center gap-2">
+              <input
+                type="text"
+                name="name"
+                value={name}
+                id="name"
+                autoComplete="name"
+                placeholder="Enter your full name"
+                className=" border border-primary rounded-[20px] h-[2.4rem] px-4 text-primary text-sm placeholder:text-primary placeholder:text-xs  flex items-center justify-center w-2/3 md:w-1/2"
+                onChange={(e) => {
+                  setName(e.target.value);
+                  setIsLoading(false);
+                  setError(null);
+                }}
+              />
               <input
                 type="email"
-                name=""
+                name="email"
                 value={email}
-                id=""
+                id="email"
+                autoComplete="email"
                 placeholder="Enter your email address"
                 className=" border border-primary rounded-[20px] h-[2.4rem] px-4 text-primary text-sm placeholder:text-primary placeholder:text-xs  flex items-center justify-center w-2/3 md:w-1/2"
                 onChange={(e) => {
@@ -72,7 +102,7 @@ const Waitlist = () => {
                 }}
               />
               {
-                <div className=" h-6 w-2/3 flex items-start pl-4">
+                <div className=" h-auto w-2/3 flex items-start pl-4">
                   <p className="text-red-600 text-sm">{error}</p>
                 </div>
               }
@@ -81,13 +111,30 @@ const Waitlist = () => {
               text="join waitlist"
               onClickHandler={onFormSubmitHandler}
               isLoading={isLoading}
+              disabled={isButtonDisabled}
             />
           </div>
           {/* desktop */}
           <form
-            className=" hidden md:block     w-full max-w-md border"
+            className=" hidden md:block     w-full max-w-md "
             onSubmit={onFormSubmitHandler}
           >
+            <div className="mb-2 ">
+              <input
+                type="text"
+                name="name"
+                value={name}
+                id="name"
+                autoComplete="name"
+                placeholder="Enter your full name"
+                className=" border border-primary rounded-[20px] h-[2.4rem] px-4 text-primary text-sm placeholder:text-primary placeholder:text-xs  flex items-center justify-center w-full"
+                onChange={(e) => {
+                  setName(e.target.value);
+                  setIsLoading(false);
+                  setError(null);
+                }}
+              />
+            </div>
             <div className="w-full h-[2.5rem] relative">
               <input
                 type="email"
@@ -95,6 +142,7 @@ const Waitlist = () => {
                 value={email}
                 id=""
                 placeholder="Enter your email address"
+                autoComplete="email"
                 className="absolute border border-primary rounded-[22px] h-full  px-4 text-primary text-sm placeholder:text-primary placeholder:text-xs  flex items-center justify-center w-full"
                 onChange={(e) => {
                   setEmail(e.target.value);
@@ -104,9 +152,14 @@ const Waitlist = () => {
               />
               <div className="absolute  right-0 top-0 h-full flex items-center">
                 <button
-                  className="px-10  border-primary h-full rounded-[22px] bg-primary text-white hover:bg-secondary transition-all  transform hover:scale-x-105  uppercase  font-extralight text-xs flex items-center"
+                  className={`px-10  border-primary h-full rounded-[22px] bg-primary text-white   uppercase  font-extralight text-xs flex items-center ${
+                    isButtonDisabled
+                      ? "cursor-not-allowed opacity-30 transition-none"
+                      : "transition-all  transform hover:scale-x-105 hover:bg-secondary "
+                  }`}
                   onClick={onFormSubmitHandler}
                   type={"submit"}
+                  disabled={isButtonDisabled}
                 >
                   Join waitlist
                   {isLoading && (
@@ -147,6 +200,12 @@ const Waitlist = () => {
           fill
         />
       </div>
+
+      <BaseModal
+        isOpen={isOpenModal}
+        closeModal={() => setIsOpenModal(false)}
+        message={modalMessage}
+      />
     </div>
   );
 };

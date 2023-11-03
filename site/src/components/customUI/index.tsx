@@ -9,6 +9,7 @@ interface PrimaryButtonProps {
   type?: 1 | 2 | 3;
   href?: string;
   isLoading?: boolean;
+  disabled?: boolean;
 }
 
 const PrimaryButton = ({
@@ -17,32 +18,39 @@ const PrimaryButton = ({
   type = 1,
   href,
   isLoading = false,
+  disabled = false,
 }: PrimaryButtonProps) => {
   return (
     <button
       className={` group flex flex-row items-center
        ${
          type === 1
-           ? "bg-primary text-white hover:bg-secondary "
+           ? "bg-primary text-white hover:bg-secondary"
            : type === 2
            ? "bg-white text-primary hover:bg-secondary "
            : "bg-primary text-white hover:bg-white hover:text-primary"
        } rounded-[40px] h-auto w-auto  px-6  whitespace-nowrap py-3  uppercase  font-extralight 
     
-       transition-all  transform hover:scale-x-105
+       
+       ${
+         disabled
+           ? "cursor-not-allowed opacity-30 transition-none hover:bg-primary"
+           : "transition-all  transform hover:scale-x-105"
+       }
     
     `}
       onClick={onClickHandler}
+      disabled={disabled}
     >
-      {href ? (
-        <div className="group-hover:scale-75 transition-all  transform ease-in-out text-xs">
-          <Link href={href}>{text}</Link>
-        </div>
-      ) : (
-        <div className="group-hover:scale-75 transition-all  transform ease-in-out text-xs">
-          {text}
-        </div>
-      )}
+      <div
+        className={` ${
+          !disabled
+            ? "group-hover:scale-75 transition-all  transform ease-in-out text-xs "
+            : "text-xs transition-none"
+        } `}
+      >
+        {href ? <Link href={href}>{text}</Link> : <>{text}</>}
+      </div>
 
       {isLoading && (
         <svg
