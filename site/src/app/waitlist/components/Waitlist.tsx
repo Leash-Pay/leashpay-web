@@ -6,7 +6,7 @@ import BaseModal from "@/components/modal";
 
 const Waitlist = () => {
   const [email, setEmail] = useState("");
-  const [name, setName] = useState("mmm");
+  const [name, setName] = useState("");
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
   const [error, setError] = useState<string | null>(null);
